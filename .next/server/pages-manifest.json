@@ -1,6 +1,14 @@
 {
   "/_app": "pages/_app.js",
+  "/advantages": "pages/advantages.js",
+  "/cart": "pages/cart.js",
+  "/contactUs": "pages/contactUs.js",
+  "/": "pages/index.js",
+  "/main": "pages/main.js",
+  "/nav": "pages/nav.js",
+  "/ourstory": "pages/ourstory.js",
+  "/products": "pages/products.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/TotalContext": "pages/TotalContext.js"
 }

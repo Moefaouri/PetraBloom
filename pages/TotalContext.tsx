@@ -7,7 +7,7 @@ interface CartContextType {
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export const CartProvider = ({ children }: { children: React.ReactNode }) => {
+const CartProvider = ({ children }: { children: React.ReactNode }) => {
     const [totalItems, setTotalItems] = useState(0);
 
     return (
@@ -16,3 +16,5 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
         </CartContext.Provider>
     );
 };
+
+export default CartProvider;

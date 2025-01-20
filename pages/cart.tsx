@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react';
 
-const cart = () =>{
-return(
-    <div className="container">
-        <div className="col-6 choose-products">
+const CartPage = () => {
+    return (
+        <div>
+            <h1>Cart Page</h1>
+            {/* Add your cart page content here */}
+        </div>
+    );
+};
 
-        </div>
-        <div className="col-6 the-total">
-        </div>
-    </div>
-)
-}
+export default CartPage;

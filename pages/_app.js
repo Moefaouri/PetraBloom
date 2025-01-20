@@ -4,8 +4,6 @@ import "../styles/reset.css"; // Your reset CSS
 import "../styles/global.css"; // Your global styles
 import "../styles/media.css"; // Your media queries or additional global styles
 import Head from "next/head";
-import { CartProvider } from "./TotalContext"; // Adjust the path as needed
-
 
 function MyApp({ Component, pageProps }) {
   return (

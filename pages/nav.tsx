@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CartContext } from "./TotalContext"; // Adjust the path as needed
 
+
 const Nav = () => {
   const { totalItems } = useContext(CartContext); // Access the totalItems from context
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu visibility
