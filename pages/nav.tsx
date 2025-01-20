@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CartContext } from "./TotalContext"; // Adjust the path as needed
+import { CartContext } from "./TotalContext";
 
 
 const Nav = () => {
