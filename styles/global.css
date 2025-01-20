@@ -1,0 +1,295 @@
+:root {
+  --body-background-color: #fffff0;
+  --primary-color: #d4af37;
+  --Secondary-color: #556b2f;
+  --white-color: #fff;
+  --black-color: #000;
+  --bold: 700;
+}
+html {
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+body {
+  font-family: "Tajawal", sans-serif;
+  background-color: var(--body-background-color);
+  direction: rtl;
+  text-align: right;
+}
+.full-width-invert {
+  box-shadow: 0 0 0 100vmax #f6efd7;
+  clip-path: inset(0 -100vmax);
+  background-color: #f6efd7;
+}
+.section-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-top: 5rem;
+}
+.nav-content {
+  z-index: 10;
+  position: relative;
+}
+.nav-link,
+.website-logo h2 {
+  color: var(--Secondary-color);
+  font-weight: var(--bold);
+}
+.website-logo h2 {
+  font-size: 1.3rem !important;
+}
+.honey-controller {
+  rotate: 180deg;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+}
+.Social-media-icon {
+  border-radius: 50%;
+  background-color: var(--white-color);
+  padding: 5px;
+}
+.nav-svg-container{
+    justify-content: flex-end !important;
+
+}
+.icon-controller{
+  display: none;
+}
+.badge {
+    font-size: 12px;
+    padding: 4px 8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+  }
+  .nav-link:focus, .nav-link:hover {
+    color: var(--white-color);
+  }
+/* home section */
+#home {
+  margin-top: 270px;
+}
+.home-label {
+  color: var(--Secondary-color);
+  font-size: 2.7rem !important;
+  height: 60px !important;
+  line-height: 130%;
+  font-weight: var(--bold);
+}
+.product-image-container img {
+  width: 100%;
+}
+.product-description {
+  font-size: 20px;
+  color: var(--Secondary-color);
+  line-height: 130%;
+}
+.carousel-inner {
+  border-radius: 40px;
+}
+.carousel-item {
+  background-color: #f6efd7;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  /* background-color: var(--primary-color); */
+  /* border-radius: 50%; */
+  width: 75px;
+  height: 75px;
+  margin: auto;
+  opacity: 1;
+}
+.carousel-control-next {
+  right: -90px;
+}
+.carousel-control-prev {
+  left: -90px;
+}
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='40px' viewBox='0 -960 960 960' width='40px' fill='%23556b2f'%3E%3Cpath d='M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z'/%3E%3C/svg%3E");
+}
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='40px' viewBox='0 -960 960 960' width='40px' fill='%23556b2f'%3E%3Cpath d='M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z'/%3E%3C/svg%3E");
+  rotate: 180deg;
+}
+/* products */
+.product-price-responsive{
+  display: none;
+}
+.prod {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #00000052;
+}
+.product-title {
+  color: var(--primary-color);
+  font-size: 34px;
+}
+.prod-img img {
+  width: 100%;
+}
+.prod-desc {
+  color: var(--Secondary-color);
+  font-size: 18px;
+}
+.primary-btns {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  color: var(--white-color);
+}
+
+.product-container .prod-img img,
+.prod {
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.fav-icon {
+  right: 30px;
+  top: 15px;
+  background-color: var(--white-color);
+  padding: 10px;
+  border-radius: 50%;
+}
+.product-price{
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.quantity-buttons button {
+    border: unset;
+    outline: unset;
+    background-color: transparent;
+}
+span.quantity {
+    font-size: 20px;
+    color: var(--Secondary-color) !important;
+}
+.quantity-buttons{
+    background-color: var(--white-color);
+    outline: 1px solid var(--primary-color);
+}
+/* advantages */
+.bee-container {
+  margin-left: 70px;
+}
+.right-content:first-child,
+.left-content:first-child {
+  /* color: #bf9201; */
+  font-size: 22px;
+}
+
+.right-content:last-child,
+.left-content:last-child {
+  /* color: var(--Secondary-color); */
+  font-size: 22px;
+}
+.flowers-img {
+  position: absolute;
+  top: 36%;
+  right: 20%;
+}
+
+.leaf {
+  position: absolute;
+  z-index: 0; /* Ensure leaves are in the background */
+  opacity: 0.5;
+}
+
+.leaf-1 {
+  top: 45%;
+  left: 5%;
+}
+
+.leaf-2 {
+  top: 20%;
+  right: 10%;
+}
+
+.leaf-3 {
+  bottom: 15%;
+  left: 20%;
+}
+
+.leaf-4 {
+  top: 50%;
+  right: 30%;
+}
+
+.leaf-5 {
+  top: 16%;
+  left: 30%;
+  transform: rotate(45deg);
+}
+.leaf-6 {
+  bottom: 15%;
+  right: 17%;
+}
+/* our story */
+.story-text {
+  /* color: var(--Secondary-color); */
+}
+.story-img img {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 100%;
+}
+/* contact us */
+.form-controller {
+  background-color: var(--white-color);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  max-width: 70%;
+  border-radius: 10px;
+}
+.contact-text {
+  /* color: var(--Secondary-color); */
+  font-weight: var(--bold);
+  font-size: 20px;
+}
+.custom-textarea {
+  height: 150px;
+  resize: none;
+}
+.custom-btn {
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: var(--bold);
+}
+.custom-btn:hover {
+  background-color: var(--Secondary-color);
+}
+.contact-img img{
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    position: absolute;
+    transition: all .2s;
+    outline-offset: 2rem;
+}
+.contact-honey img{
+    left: 0;
+    top: -2rem;
+}
+.contact-herbs img{
+    right: 0;
+    top: 2rem;
+}
+.contact-milk img{
+    left: 20%;
+    top: 10rem;
+}
+.contact-img img:hover {
+    transform: scale(1.05) translateY(-0.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+

@@ -1,0 +1,189 @@
+import React, { useState, useContext } from "react";
+import Image from "next/image";
+import { CartContext } from "./TotalContext"; // Adjust the path as needed
+
+const Products = () => {
+  const { totalItems, setTotalItems } = useContext(CartContext); // Use CartContext for totalItems
+  const [cart, setCart] = useState({
+    1: 0, // Product 1 (honey)
+    2: 0, // Product 2 (milk)
+    3: 0, // Product 3 (herbs)
+  });
+
+  const handleAddToCart = (productId) => {
+    setCart((prevCart) => {
+      const newCart = { ...prevCart, [productId]: 1 }; // Set quantity to 1 when added
+      const total = Object.values(newCart).reduce(
+        (acc, quantity) => acc + quantity,
+        0
+      );
+      setTotalItems(total); // Update total items in the context
+      return newCart;
+    });
+  };
+
+  const incrementQuantity = (productId) => {
+    setCart((prevCart) => {
+      const newCart = { ...prevCart, [productId]: prevCart[productId] + 1 };
+      const total = Object.values(newCart).reduce(
+        (acc, quantity) => acc + quantity,
+        0
+      );
+      setTotalItems(total); // Update total items in the context
+      return newCart;
+    });
+  };
+
+  const decrementQuantity = (productId) => {
+    setCart((prevCart) => {
+      const newCart = {
+        ...prevCart,
+        [productId]: Math.max(prevCart[productId] - 1, 0),
+      };
+      const total = Object.values(newCart).reduce(
+        (acc, quantity) => acc + quantity,
+        0
+      );
+      setTotalItems(total); // Update total items in the context
+      return newCart;
+    });
+  };
+
+  const products = [
+    {
+      id: 1,
+      title: "عسل",
+      description: "عسل طبيعي من جبال السلط بلدي واصلي 100% 'الأكثر مبيعا'",
+      image: "/images/honey.webp",
+      price: 20,
+      currency: "د.أ",
+    },
+    {
+      id: 2,
+      title: "البان",
+      description: "لبن بلدي من ايادي سيدات عصاميات بلدي يمتاز بجودته العالية",
+      image: "/images/milk.webp",
+      price: 20,
+      currency: "د.أ",
+    },
+    {
+      id: 3,
+      title: "اعشاب",
+      description:
+        "اعشاب بلدية ووصفات طبية لعلاج الكثير من الامراض كلها من جبال بلدنا",
+      image: "/images/herbs.webp",
+      price: 20,
+      currency: "د.أ",
+    },
+  ];
+
+  return (
+    <div className="container my-5 full-width-invert">
+      <div className="row text-center my-5">
+        <h2 className="section-title">منتجاتنا</h2>
+        <div className="total-items"></div>
+      </div>
+      <div className="row">
+        {products.map((product) => (
+          <div className="col-12  col-md-6 col-lg-4 mb-5" key={product.id}>
+            <div className="product-container position-relative mb-1">
+              <span className="fav-icon position-absolute">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    fill="white"
+                    stroke="black"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </span>
+              <div className="prod-img">
+                <Image
+                  src={product.image}
+                  width={300}
+                  height={300}
+                  alt={product.title}
+                />
+              </div>
+              <div className="prod">
+                <h3 className="product-title">
+                  {product.title}
+                  <span className="product-price-responsive">
+                    {product.price} {product.currency}
+                  </span>
+                </h3>
+                <p className="prod-desc py-4">{product.description}</p>
+                {cart[product.id] === 0 ? (
+                  <div className="d-flex justify-content-between align-items-center">
+                    <button
+                      className="primary-btns d-flex gap-2 mt-3"
+                      onClick={() => handleAddToCart(product.id)}
+                    >
+                      الأضافة الى السلة
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#ffffff"
+                      >
+                        <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+                      </svg>
+                    </button>
+                    <span className="product-price">
+                      {product.price} {product.currency}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="d-flex justify-content-between align-items-center mt-3">
+                    <div className="quantity-buttons d-flex gap-4 align-items-center primary-btns">
+                      <button
+                        className="decrement-btn"
+                        onClick={() => decrementQuantity(product.id)}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#556b2f"
+                        >
+                          <path d="M240-440q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h480q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H240Z" />
+                        </svg>
+                      </button>
+                      <span className="quantity">{cart[product.id]}</span>
+                      <button
+                        className="increment-btn"
+                        onClick={() => incrementQuantity(product.id)}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#556b2f"
+                        >
+                          <path d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z" />
+                        </svg>
+                      </button>
+                    </div>
+                    <span className="product-price">
+                      {product.price} {product.currency}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Products;
