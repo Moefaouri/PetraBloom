@@ -1,14 +1,8 @@
 {
-  "/_app": "pages/_app.js",
-  "/advantages": "pages/advantages.js",
-  "/cart": "pages/cart.js",
-  "/contactUs": "pages/contactUs.js",
-  "/": "pages/index.js",
-  "/main": "pages/main.js",
-  "/nav": "pages/nav.js",
-  "/ourstory": "pages/ourstory.js",
-  "/products": "pages/products.js",
   "/_error": "pages/_error.js",
+  "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/TotalContext": "pages/TotalContext.js"
+  "/": "pages/index.js",
+  "/contactUs": "pages/contactUs.js",
+  "/ourstory": "pages/ourstory.js"
 }

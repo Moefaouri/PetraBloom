@@ -1,51 +1,73 @@
+@media (min-width: 1199px) and (max-width: 1500px) {
+  .carousel-control-prev {
+    left: 0px;
+  }
+  .carousel-control-next {
+    right: 0px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .product-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .form-controller {
+    max-width: 94%;
+}
+  .product-price-responsive{
+    font-size: 24px;
 
-@media (min-width: 1199px) and (max-width: 1500px){
-    .carousel-control-prev{
-        left: 0px;
-      }
-      .carousel-control-next{
-        right: 0px;
-      }
+  }
+  .prod-desc {
+    font-size: 15px;
 }
-@media (min-width: 992px) and (max-width: 1199px)  {
-    .icon-controller,.social-media{
-        display: none !important;
-    }
-    .nav-content {
-        justify-content: space-between;
-    }
-    .nav {
-        flex-direction: row !important;
-        white-space: nowrap;
-    }
-    .cart svg{
-        width: 24px;
-        height: 24px;
-    }
-    .product-price-responsive{
-        display: block;
-      }
-      .product-price{
-        display: none;
-      }
-      .carousel-control-prev{
-        left: 0px;
-      }
-      .carousel-control-next{
-        right: 0px;
-      }
-      .cart{
-        justify-content: end;
-      }
-}
-@media (width <=991px) {
-  .carousel-control-prev,.carousel-control-next {
+  .icon-controller,
+  .social-media {
+    display: none !important;
+  }
+  .nav-content {
+    justify-content: space-between;
+  }
+  .nav {
+    flex-direction: row !important;
+    white-space: nowrap;
+  }
+  .cart svg {
+    width: 24px;
+    height: 24px;
+  }
+  .product-price-responsive {
+    display: block;
+  }
+  .responsive-md{
+    align-items: center;
+  }
+  .product-price {
     display: none;
   }
-  .nav-link:focus, .nav-link:hover {
+  .carousel-control-prev {
+    left: 0px;
+  }
+  .carousel-control-next {
+    right: 0px;
+  }
+  .cart {
+    justify-content: end;
+  }
+}
+@media (width <=991px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+  .nav-link:focus,
+  .nav-link:hover {
     color: #556b2f;
   }
-  .honey-controller,.cart,.social-media {
+  .honey-controller,
+  .cart {
     display: none !important;
   }
   .icon-controller {
@@ -67,7 +89,7 @@
     margin-bottom: 20px;
     height: 100px;
   }
-  .product-price-responsive{
+  .product-price-responsive {
     display: block;
   }
   .carousel-inner {
@@ -80,51 +102,76 @@
     font-size: 26px;
   }
   .prod-desc,
-  .primary-btns ,
-  .contact-text 
-      {
+  .primary-btns,
+  .contact-text {
     font-size: 15px;
   }
   .primary-btns {
     width: 100%;
+    justify-content: center;
   }
   .product-title {
     display: flex;
     justify-content: space-between;
   }
-  .product-price{
+  .product-price {
     display: none;
   }
   .quantity-buttons {
     justify-content: center;
   }
-  .right-content div , .left-content div {
-    padding: 5px 20px;  
+  .bee-container img{
+    left: 0;
+  }
+  .flowers-img {
+    top: 35%;
+    right: 27%;
 }
-.story-text{
+.responsive-md{
+  align-items: center;
+}
+.road-container{
+  justify-content: center;
+    display: flex
+;
+}
+  .right-content div,
+  .left-content div {
+    padding: 5px 20px;
+    font-size: 17px;
+  }
+  .story-text {
     text-align: center;
-}
-.form-controller {
+  }
+  .form-controller {
     padding: 20px;
     max-width: 100%;
-}
-.contact-milk img {
+  }
+  .contact-milk img {
     top: 6rem;
-}
-.contact-honey img,.contact-herbs img {
+  }
+  .contact-honey img,
+  .contact-herbs img {
     left: 5px;
-}
-.nav.open {
+  }
+  .nav.open {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .social-media{
+    margin-bottom: 10px;
   }
   .nav.open ul {
+    margin-top: 15px;
     flex-direction: column;
     align-items: center;
   }
-  .nav.open .social-media {
+  .nav.open {
     margin-top: 20px;
   }
-
 }

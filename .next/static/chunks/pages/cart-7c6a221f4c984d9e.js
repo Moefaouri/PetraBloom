@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[442],{6764:(_,n,s)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/cart",function(){return s(2540)}])},2540:(_,n,s)=>{"use strict";s.r(n),s(4848),s(6540)}},_=>{var n=n=>_(_.s=n);_.O(0,[636,593,792],()=>n(6764)),_N_E=_.O()}]);

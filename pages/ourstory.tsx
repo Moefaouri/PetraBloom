@@ -7,7 +7,7 @@ const OurStory = () => {
       <div className="row text-center my-5">
         <h2 className="section-title">قصتنا</h2>
       </div>
-      <div className="row justify-content-center mb-5">
+      <div className="row justify-content-center mb-5 responsive-md">
         <div className="col-12  col-md-6 col-lg-5 mb-5">
           <div className="night-container d-flex flex-column gap-4">
             <div className="story-text text-align-right">

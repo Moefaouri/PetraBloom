@@ -53,7 +53,7 @@ const Advantages = () => {
         <h2 className="section-title">الفوائد</h2>
       </div>
       <div className="row">
-        <div className="col-12  col-md-6 col-lg-4 right-content  d-flex flex-column justify-content-around">
+        <div className="col-12  col-md-4 col-lg-4 right-content  d-flex flex-column justify-content-around">
           <div className="row">
             منتجاتنا الأفضل في السوق لأنها طبيعية من مزارعنا المنتشرة في أرجاء
             المملكة ولا تحتوي على مواد حافظة.
@@ -69,7 +69,7 @@ const Advantages = () => {
           </div>
           <div className="row">&nbsp;</div>
         </div>
-        <div className="col-12  col-md-6 col-lg-4 dashed-line-container ">
+        <div className="col-12  col-md-4 col-lg-4 dashed-line-container ">
           <div className="bee-container d-flex justify-content-center">
             <Image
               src="/images/bee.webp"
@@ -102,7 +102,7 @@ const Advantages = () => {
             />
           </div>
         </div>
-        <div className="col-12  col-md-6 col-lg-4 left-content  d-flex justify-content-around flex-column">
+        <div className="col-12  col-md-4 col-lg-4 left-content  d-flex justify-content-around flex-column">
           <div className="row">&nbsp;</div>
           <div className="row">
             منتجاتنا الأفضل في السوق لأنها طبيعية من مزارعنا المنتشرة في أرجاء
