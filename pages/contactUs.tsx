@@ -17,7 +17,6 @@ const ContactUs = () => {
             <form
               action="mailto:mnsour17@gmail.com" // The recipient's email address
               method="POST" // POST method to send the form data
-              enctype="text/plain" // Ensures data is sent as plain text
               className="d-flex flex-column gap-4 mb-3"
             >
               <input
