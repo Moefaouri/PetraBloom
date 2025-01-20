@@ -5,7 +5,6 @@ import Products from "./products";
 import Advantages from "./advantages"
 import OurStory from "./ourstory"
 import ContactUs from "./contactUs"
-import CartProvider from './TotalContext';
 
 
 const Home = () => {

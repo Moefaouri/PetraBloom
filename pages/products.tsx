@@ -1,92 +1,80 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import Image from "next/image";
-import { CartContext } from "./TotalContext"; // Adjust the path as needed
+import { useCart } from "./TotalContext";
+
+interface Product {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  price: number;
+  currency: string;
+}
+
+const products: Product[] = [
+  {
+    id: 1,
+    title: "عسل",
+    description: "عسل طبيعي من جبال السلط بلدي واصلي 100% 'الأكثر مبيعا'",
+    image: "/images/honey.webp",
+    price: 20,
+    currency: "د.أ",
+  },
+  {
+    id: 2,
+    title: "البان",
+    description: "لبن بلدي من ايادي سيدات عصاميات بلدي يمتاز بجودته العالية",
+    image: "/images/milk.webp",
+    price: 20,
+    currency: "د.أ",
+  },
+  {
+    id: 3,
+    title: "اعشاب",
+    description: "اعشاب بلدية ووصفات طبية لعلاج الكثير من الامراض كلها من جبال بلدنا",
+    image: "/images/herbs.webp",
+    price: 20,
+    currency: "د.أ",
+  },
+];
 
 const Products = () => {
-  const { totalItems, setTotalItems } = useContext(CartContext); // Use CartContext for totalItems
-  const [cart, setCart] = useState({
-    1: 0, // Product 1 (honey)
-    2: 0, // Product 2 (milk)
-    3: 0, // Product 3 (herbs)
-  });
+  const { setTotalItems, cart, setCart } = useCart();
 
-  const handleAddToCart = (productId) => {
-    setCart((prevCart) => {
-      const newCart = { ...prevCart, [productId]: 1 }; // Set quantity to 1 when added
-      const total = Object.values(newCart).reduce(
-        (acc, quantity) => acc + quantity,
-        0
-      );
-      setTotalItems(total); // Update total items in the context
+  const handleAddToCart = (productId: number) => {
+    setCart(prev => {
+      const newCart = { ...prev, [productId]: 1 };
+      setTotalItems(Object.values(newCart).reduce((a, b) => a + b, 0));
       return newCart;
     });
   };
 
-  const incrementQuantity = (productId) => {
-    setCart((prevCart) => {
-      const newCart = { ...prevCart, [productId]: prevCart[productId] + 1 };
-      const total = Object.values(newCart).reduce(
-        (acc, quantity) => acc + quantity,
-        0
-      );
-      setTotalItems(total); // Update total items in the context
+  const incrementQuantity = (productId: number) => {
+    setCart(prev => {
+      const newCart = { ...prev, [productId]: (prev[productId] || 0) + 1 };
+      setTotalItems(Object.values(newCart).reduce((a, b) => a + b, 0));
       return newCart;
     });
   };
 
-  const decrementQuantity = (productId) => {
-    setCart((prevCart) => {
-      const newCart = {
-        ...prevCart,
-        [productId]: Math.max(prevCart[productId] - 1, 0),
-      };
-      const total = Object.values(newCart).reduce(
-        (acc, quantity) => acc + quantity,
-        0
-      );
-      setTotalItems(total); // Update total items in the context
+  const decrementQuantity = (productId: number) => {
+    setCart(prev => {
+      const newCart = { ...prev, [productId]: Math.max((prev[productId] || 0) - 1, 0) };
+      setTotalItems(Object.values(newCart).reduce((a, b) => a + b, 0));
       return newCart;
     });
   };
-
-  const products = [
-    {
-      id: 1,
-      title: "عسل",
-      description: "عسل طبيعي من جبال السلط بلدي واصلي 100% 'الأكثر مبيعا'",
-      image: "/images/honey.webp",
-      price: 20,
-      currency: "د.أ",
-    },
-    {
-      id: 2,
-      title: "البان",
-      description: "لبن بلدي من ايادي سيدات عصاميات بلدي يمتاز بجودته العالية",
-      image: "/images/milk.webp",
-      price: 20,
-      currency: "د.أ",
-    },
-    {
-      id: 3,
-      title: "اعشاب",
-      description:
-        "اعشاب بلدية ووصفات طبية لعلاج الكثير من الامراض كلها من جبال بلدنا",
-      image: "/images/herbs.webp",
-      price: 20,
-      currency: "د.أ",
-    },
-  ];
 
   return (
     <div className="container my-5 full-width-invert">
       <div className="row text-center my-5">
         <h2 className="section-title">منتجاتنا</h2>
-        <div className="total-items"></div>
       </div>
       <div className="row">
-        {products.map((product) => (
-          <div className="col-12  col-md-6 col-lg-4 mb-5" key={product.id}>
+        {products.map(product => (
+          <div className="col-12 col-md-6 col-lg-4 mb-5" key={product.id}>
             <div className="product-container position-relative mb-1">
+              {/* Favorite icon */}
               <span className="fav-icon position-absolute">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -102,14 +90,19 @@ const Products = () => {
                   />
                 </svg>
               </span>
+              
+              {/* Product image */}
               <div className="prod-img">
                 <Image
                   src={product.image}
                   width={300}
                   height={300}
                   alt={product.title}
+                  priority={true}
                 />
               </div>
+
+              {/* Product details */}
               <div className="prod">
                 <h3 className="product-title">
                   {product.title}
@@ -118,7 +111,9 @@ const Products = () => {
                   </span>
                 </h3>
                 <p className="prod-desc py-4">{product.description}</p>
-                {cart[product.id] === 0 ? (
+                
+                {/* Cart controls */}
+                {(cart[product.id] || 0) === 0 ? (
                   <div className="d-flex justify-content-between align-items-center">
                     <button
                       className="primary-btns d-flex gap-2 mt-3"

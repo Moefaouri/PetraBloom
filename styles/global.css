@@ -292,4 +292,48 @@ span.quantity {
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+/* cart page */
+.arabic-title {
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 2.5rem;
+}
+
+.arabic-card {
+  direction: rtl;
+  text-align: right;
+  transition: transform 0.2s;
+}
+
+.arabic-card:hover {
+  transform: translateY(-2px);
+}
+
+.product-image {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.arabic-text {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.2rem;
+}
+
+.arabic-button {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.arabic-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.empty-cart-icon {
+  font-size: 4rem;
+  opacity: 0.5;
+}
 
