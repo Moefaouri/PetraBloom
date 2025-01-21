@@ -1,10 +1,4 @@
-import { useRouter } from "next/router";
-import Nav from "./nav";
-
-const CartPage = () => {
-  const router = useRouter();
-  const { cart } = router.query;
-
+const CartPopup = ({ cart, onClose }) => {
   const products = [
     {
       id: 1,
@@ -32,8 +26,14 @@ const CartPage = () => {
     },
   ];
 
-  // Parse cart data from URL
-  const parsedCart = cart ? JSON.parse(decodeURIComponent(cart as string)) : {};
+  // Safely parse cart data
+  let parsedCart = {};
+  try {
+    parsedCart = typeof cart === "string" ? JSON.parse(decodeURIComponent(cart)) : cart || {};
+  } catch (error) {
+    console.error("Failed to parse cart data:", error);
+    parsedCart = {};
+  }
 
   // Filter and map cart items
   const selectedItems = Object.keys(parsedCart)
@@ -53,11 +53,20 @@ const CartPage = () => {
   }, 0);
 
   return (
-    <div className="container py-5">
-      <h2 className="text-center mb-4 arabic-title">سلة التسوق</h2>
-      
-      <div className="row justify-content-center">
-        <div className="col-lg-8">
+    <>
+      {/* Overlay */}
+      <div className={`cart-overlay ${onClose ? 'open' : ''}`} onClick={onClose}></div>
+
+      {/* Cart Popup */}
+      <div className="cart-popup open">
+        {/* Close Button */}
+        <button className="close-button" onClick={onClose}>
+        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        </button>
+
+        <div className="container py-5">
+          <h2 className="text-center mb-4 section-title-n-m">سلة التسوق</h2>
+
           {selectedItems.length > 0 ? (
             selectedItems.map((item) => (
               item && (
@@ -67,10 +76,10 @@ const CartPage = () => {
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="img-fluid rounded-start product-image"
+                        className="img-fluid  product-image p-4"
                       />
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-8 py-4">
                       <div className="card-body">
                         <h5 className="card-title arabic-text">{item.title}</h5>
                         <div className="d-flex flex-column gap-2">
@@ -116,8 +125,8 @@ const CartPage = () => {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default CartPage;
+export default CartPopup;

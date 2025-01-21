@@ -27,6 +27,10 @@ body {
   color: var(--primary-color);
   margin-top: 5rem;
 }
+.section-title-n-m{
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
 .nav-content {
   z-index: 10;
   position: relative;
@@ -293,47 +297,80 @@ span.quantity {
     z-index: 1;
 }
 /* cart page */
-.arabic-title {
-  font-family: 'Tajawal', sans-serif;
-  font-weight: 700;
-  color: #2c3e50;
-  font-size: 2.5rem;
+.cart-popup {
+  position: fixed;
+  top: 0;
+  left: -100%; 
+  width: 34%;
+  height: 100vh;
+  background-color: var(--body-background-color);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
 }
 
-.arabic-card {
-  direction: rtl;
-  text-align: right;
-  transition: transform 0.2s;
+.cart-popup.open {
+  left: 0; /* Slide in */
 }
 
-.arabic-card:hover {
-  transform: translateY(-2px);
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.product-image {
-  max-height: 200px;
-  object-fit: cover;
+.cart-overlay.open {
+  opacity: 1;
+  visibility: visible;
 }
 
-.arabic-text {
-  font-family: 'Tajawal', sans-serif;
-  font-size: 1.2rem;
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
 }
 
-.arabic-button {
-  font-family: 'Tajawal', sans-serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
+.close-button:hover {
+  color: #000;
 }
-
-.arabic-button:hover {
-  transform: scale(1.02);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.card {
+  border-radius: 20px;
+  background-color:transparent;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 }
-
-.empty-cart-icon {
-  font-size: 4rem;
-  opacity: 0.5;
+.card-title{
+  font-size: 24px;
+  color: var(--primary-color);
 }
+.arabic-text{
+  font-size: 1.5rem;
+}
+.text-success{
+  font-size: 20px;
+}
+.arabic-button{
+  font-size: 20px;
+  background-color: var(--Secondary-color);
+  border-radius: 15px;
+  border: 3px solid var(--Secondary-color);
 
+}
+.arabic-button:hover{
+  background-color: transparent;
+  border: 3px solid var(--Secondary-color);
+  color: var(--black-color);
+}

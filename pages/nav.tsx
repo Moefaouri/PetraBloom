@@ -3,17 +3,18 @@ import { useRouter } from "next/router";
 import { CartProvider, useCart } from "../src/context/CartContext";
 import Image from "next/image";
 import Link from "next/link";
+import CartPage from "./cart";
 
 const Nav = () => {
   const router = useRouter();
   const { totalItems, cart } = useCart();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleCartClick = () => {
-    const cartQuery = encodeURIComponent(JSON.stringify(cart));
-    router.push(`/cart?cart=${cartQuery}`);
+    setIsCartOpen(!isCartOpen); // Toggle cart popup visibility
   };
 
   return (
@@ -41,7 +42,7 @@ const Nav = () => {
 
         <div className="nav-content mt-3 row align-items-center">
           {/* Logo Section */}
-          <div className="website-logo d-flex flex-row gap-2 align-items-center col-10 col-md-10 col-lg-3 col-xl-2">
+          <div className="website-logo d-flex flex-row gap-2 align-items-center col-6 col-md-6 col-lg-3 col-xl-2">
             <Image
               src="/images/logo.png"
               width={80}
@@ -52,8 +53,59 @@ const Nav = () => {
             <h2>بترا بلوم</h2>
           </div>
 
+          {/* Cart & Favorites Section */}
+          <div
+            className="col-4 col-lg-1 col-xl-2 justify-content-center d-flex gap-3 align-items-center position-relative"
+            style={{ zIndex: 999 }}
+          >
+            {/* Cart Icon with Badge */}
+            <div className="position-relative d-flex cart gap-3">
+              <div
+                onClick={handleCartClick}
+                style={{ cursor: "pointer" }}
+                role="button"
+                aria-label="View Cart"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="28px"
+                  viewBox="0 -960 960 960"
+                  width="28px"
+                  fill="#fff"
+                >
+                  <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+                </svg>
+                {totalItems > 0 && (
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {totalItems}
+                  </span>
+                )}
+              </div>
+            </div>
+            {/* Cart Popup */}
+            {isCartOpen && (
+              <CartPage
+                cart={encodeURIComponent(JSON.stringify(cart))}
+                onClose={() => setIsCartOpen(false)}
+              />
+            )}
+            {/* Favorite Icon */}
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="28px"
+                viewBox="0 0 24 24"
+                width="28px"
+                fill="#fff"
+                className="res-svg"
+              >
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </div>
+          </div>
+
           {/* Mobile Menu Toggle */}
-          <div className="col-2 icon-controller">
+          <div className="col-2 icon-controller justify-content-center">
             <button
               className="navbar-toggler"
               type="button"
@@ -78,7 +130,9 @@ const Nav = () => {
 
           {/* Navigation Links */}
           <div
-            className={`col-12 col-lg-7 col-xl-6 ${isMenuOpen ? "d-block" : "d-none d-lg-flex"}`}
+            className={`col-12 col-lg-7 col-xl-6 ${
+              isMenuOpen ? "d-block" : "d-none d-lg-flex"
+            }`}
           >
             <nav className={`nav ${isMenuOpen ? "open text-center" : ""}`}>
               <ul className="d-flex flex-column flex-md-column flex-lg-row justify-content-center gap-1 list-unstyled">
@@ -88,22 +142,34 @@ const Nav = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/products" className="nav-link text-decoration-none">
+                  <Link
+                    href="/products"
+                    className="nav-link text-decoration-none"
+                  >
                     منتجاتنا
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/advantages" className="nav-link text-decoration-none">
+                  <Link
+                    href="/advantages"
+                    className="nav-link text-decoration-none"
+                  >
                     الفوائد
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/ourstory" className="nav-link text-decoration-none">
+                  <Link
+                    href="/ourstory"
+                    className="nav-link text-decoration-none"
+                  >
                     قصتنا
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/contactUs" className="nav-link text-decoration-none">
+                  <Link
+                    href="/contactUs"
+                    className="nav-link text-decoration-none"
+                  >
                     التواصل معنا
                   </Link>
                 </li>
@@ -215,45 +281,6 @@ const Nav = () => {
                 <path d="M384 121.9L232.6 288 381.1 470H297.6L191.9 324.3 87.5 470H2.9L151.7 288 0 121.9h85.6l107.5 132.3L300.5 121.9H384z" />
               </svg>
             </a>
-          </div>
-
-          {/* Cart & Favorites Section */}
-          <div className="col-2 col-xl-2 justify-content-end d-flex gap-3 align-items-center position-relative" style={{ zIndex: 999 }}>
-            {/* Cart Icon with Badge */}
-            <div className="position-relative d-flex cart gap-3">
-              <div
-                onClick={handleCartClick}
-                style={{ cursor: "pointer" }}
-                role="button"
-                aria-label="View Cart"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="28px"
-                  viewBox="0 -960 960 960"
-                  width="28px"
-                  fill="#fff"
-                >
-                  <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
-                </svg>
-                {totalItems > 0 && (
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {totalItems}
-                  </span>
-                )}
-              </div>
-            </div>
-
-            {/* Favorite Icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="28px"
-              viewBox="0 0 24 24"
-              width="28px"
-              fill="#fff"
-            >
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-            </svg>
           </div>
         </div>
       </header>

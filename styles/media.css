@@ -56,6 +56,7 @@
   .cart {
     justify-content: flex-end;
   }
+  
 }
 @media (width <=991px) {
   .carousel-control-prev,
@@ -66,9 +67,11 @@
   .nav-link:hover {
     color: #556b2f;
   }
-  .honey-controller,
-  .cart {
+  .honey-controller{
     display: none !important;
+  }
+  .cart svg,.res-svg{
+    fill: #000;
   }
   .icon-controller {
     display: flex;
@@ -185,5 +188,8 @@
   .arabic-card {
     margin-left: -15px;
     margin-right: -15px;
+  }
+  .cart-popup {
+    width: 100%;
   }
 }
