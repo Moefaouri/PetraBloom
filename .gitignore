@@ -1,1 +1,22 @@
 node_modules
+.DS_Store
+.env
+*.log
+*.lock
+.idea/
+.vscode/
+dist/
+build/
+coverage/
+
+# Next.js build files
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary and system files
+Thumbs.db
