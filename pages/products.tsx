@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { useCart } from "./TotalContext";
+import { CartProvider, useCart } from "../src/context/CartContext";
 
 interface Product {
   id: number;

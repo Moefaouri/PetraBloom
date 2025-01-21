@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import { useCart } from "./TotalContext";
+import { CartProvider, useCart } from "../src/context/CartContext";
 import Image from "next/image";
 import Link from "next/link";
 

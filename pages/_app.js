@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { CartProvider } from "./TotalContext"; // Adjusted to match your context file
+import { CartProvider, useCart } from "../src/context/CartContext"; // Adjusted to match your context file
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/reset.css";
 import "../styles/global.css";

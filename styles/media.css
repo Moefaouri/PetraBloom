@@ -54,7 +54,7 @@
     right: 0px;
   }
   .cart {
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 @media (width <=991px) {
@@ -72,7 +72,7 @@
   }
   .icon-controller {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
   .website-logo img {
     width: 60px;
