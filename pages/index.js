@@ -10,7 +10,6 @@ import ContactUs from "./contactUs"
 const Home = () => {
   return (
     <div>
-      <Nav />
       <Main />
       <Products />
       <Advantages />

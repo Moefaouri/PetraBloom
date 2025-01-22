@@ -27,7 +27,7 @@ body {
   color: var(--primary-color);
   margin-top: 5rem;
 }
-.section-title-n-m{
+.section-title-n-m {
   font-size: 2.5rem;
   color: var(--primary-color);
 }
@@ -54,23 +54,16 @@ body {
   background-color: var(--white-color);
   padding: 5px;
 }
-.nav-svg-container{
-    justify-content: flex-end !important;
-
+.nav-svg-container {
+  justify-content: flex-end !important;
 }
-.icon-controller{
+.icon-controller {
   display: none;
 }
-.badge {
-    font-size: 12px;
-    padding: 4px 8px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-  }
-  .nav-link:focus, .nav-link:hover {
-    color: var(--white-color);
-  }
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--white-color);
+}
 /* home section */
 #home {
   margin-top: 270px;
@@ -119,7 +112,7 @@ body {
   rotate: 180deg;
 }
 /* products */
-.product-price-responsive{
+.product-price-responsive {
   display: none;
 }
 .prod {
@@ -161,23 +154,23 @@ body {
   padding: 10px;
   border-radius: 50%;
 }
-.product-price{
-    font-size: 20px;
-    font-weight: 500;
-    padding-left: 10px;
+.product-price {
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 10px;
 }
 .quantity-buttons button {
-    border: unset;
-    outline: unset;
-    background-color: transparent;
+  border: unset;
+  outline: unset;
+  background-color: transparent;
 }
 span.quantity {
-    font-size: 20px;
-    color: var(--Secondary-color) !important;
+  font-size: 20px;
+  color: var(--Secondary-color) !important;
 }
-.quantity-buttons{
-    background-color: var(--white-color);
-    outline: 1px solid var(--primary-color);
+.quantity-buttons {
+  background-color: var(--white-color);
+  outline: 1px solid var(--primary-color);
 }
 /* advantages */
 .bee-container {
@@ -272,35 +265,35 @@ span.quantity {
 .custom-btn:hover {
   background-color: var(--Secondary-color);
 }
-.contact-img img{
-    width: 55%;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-    position: absolute;
-    transition: all .2s;
-    outline-offset: 2rem;
+.contact-img img {
+  width: 55%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  position: absolute;
+  transition: all 0.2s;
+  outline-offset: 2rem;
 }
-.contact-honey img{
-    left: 0;
-    top: -2rem;
+.contact-honey img {
+  left: 0;
+  top: -2rem;
 }
-.contact-herbs img{
-    right: 0;
-    top: 2rem;
+.contact-herbs img {
+  right: 0;
+  top: 2rem;
 }
-.contact-milk img{
-    left: 20%;
-    top: 10rem;
+.contact-milk img {
+  left: 20%;
+  top: 10rem;
 }
 .contact-img img:hover {
-    transform: scale(1.05) translateY(-0.5rem);
-    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
-    z-index: 1;
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 /* cart page */
 .cart-popup {
   position: fixed;
   top: 0;
-  left: -100%; 
+  left: -100%;
   width: 34%;
   height: 100vh;
   background-color: var(--body-background-color);
@@ -348,29 +341,87 @@ span.quantity {
 }
 .card {
   border-radius: 20px;
-  background-color:transparent;
+  background-color: transparent;
   border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 }
-.card-title{
+.card-title {
   font-size: 24px;
   color: var(--primary-color);
 }
-.arabic-text{
+.arabic-text {
   font-size: 1.5rem;
 }
-.text-success{
+.text-success {
   font-size: 20px;
 }
-.arabic-button{
+.arabic-button {
   font-size: 20px;
   background-color: var(--Secondary-color);
   border-radius: 15px;
   border: 3px solid var(--Secondary-color);
-
 }
-.arabic-button:hover{
+.arabic-button:hover {
   background-color: transparent;
   border: 3px solid var(--Secondary-color);
   color: var(--black-color);
+}
+.badge-counter {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px;
+}
+/* Add to existing cart popup styles */
+.favorites-list {
+  padding: 20px;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.favorite-item img {
+  border-radius: 8px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.item-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+.remove-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-right: 10px;
+}
+
+.remove-btn:hover {
+  transform: scale(1.1);
 }

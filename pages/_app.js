@@ -1,6 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import { CartProvider, useCart } from "../src/context/CartContext"; // Adjusted to match your context file
+import { FavoriteProvider } from "../src/context/FavoriteContext";
+import Nav from "./nav"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/reset.css";
 import "../styles/global.css";
@@ -21,8 +23,11 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <CartProvider>
+      <FavoriteProvider>
+        <Nav />
         <Component {...pageProps} />
-      </CartProvider>
+      </FavoriteProvider>
+    </CartProvider>
 
       {/* Add Bootstrap JS */}
       <script 

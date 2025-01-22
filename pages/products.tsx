@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { CartProvider, useCart } from "../src/context/CartContext";
+import { useFavorites } from "../src/context/FavoriteContext";
 
 interface Product {
   id: number;
@@ -40,6 +41,8 @@ const products: Product[] = [
 
 const Products = () => {
   const { setTotalItems, cart, setCart } = useCart();
+  const { favorites, toggleFavorite } = useFavorites();
+
 
   const handleAddToCart = (productId: number) => {
     setCart(prev => {
@@ -74,8 +77,12 @@ const Products = () => {
         {products.map(product => (
           <div className="col-12 col-md-6 col-lg-4 mb-5" key={product.id}>
             <div className="product-container position-relative mb-1">
-              {/* Favorite icon */}
-              <span className="fav-icon position-absolute">
+              {/* Updated Favorite icon */}
+              <span 
+                className="fav-icon position-absolute"
+                onClick={() => toggleFavorite(product.id)} // ADDED
+                style={{ cursor: 'pointer', zIndex: 2 }} // ADDED
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24"
@@ -84,14 +91,14 @@ const Products = () => {
                 >
                   <path
                     d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                    fill="white"
-                    stroke="black"
-                    strokeWidth="2"
+                    fill={favorites.has(product.id) ? "red" : "white"} // MODIFIED
+                    stroke={favorites.has(product.id) ? "none" : "black"}
+                    strokeWidth={favorites.has(product.id) ? 0 : 2}
                   />
                 </svg>
               </span>
-              
-              {/* Product image */}
+
+              {/* Rest of your existing product code remains unchanged */}
               <div className="prod-img">
                 <Image
                   src={product.image}
@@ -102,7 +109,6 @@ const Products = () => {
                 />
               </div>
 
-              {/* Product details */}
               <div className="prod">
                 <h3 className="product-title">
                   {product.title}
@@ -112,7 +118,7 @@ const Products = () => {
                 </h3>
                 <p className="prod-desc py-4">{product.description}</p>
                 
-                {/* Cart controls */}
+                {/* Cart controls remain unchanged */}
                 {(cart[product.id] || 0) === 0 ? (
                   <div className="d-flex justify-content-between align-items-center">
                     <button
