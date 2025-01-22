@@ -31,8 +31,7 @@ const products: Product[] = [
   {
     id: 3,
     title: "اعشاب",
-    description:
-      "اعشاب بلدية ووصفات طبية لعلاج الكثير من الامراض كلها من جبال بلدنا",
+    description: "اعشاب بلدية ووصفات طبية لعلاج الكثير من الامراض كلها من جبال بلدنا",
     image: "/images/herbs.webp",
     price: 20,
     currency: "د.أ",
@@ -40,13 +39,15 @@ const products: Product[] = [
 ];
 
 const CartPage = ({ cart, onClose }) => {
-  const { setCart } = useCart();
+  const { setCart, setTotalItems } = useCart();
 
   // Handle item removal
   const handleRemove = (productId) => {
     setCart((prevCart) => {
       const newCart = { ...prevCart };
+      const removedQuantity = newCart[productId] || 0; // Get the quantity being removed
       delete newCart[productId];
+      setTotalItems((prevTotal) => prevTotal - removedQuantity); // Update the total items
       return newCart;
     });
   };
@@ -125,23 +126,25 @@ const CartPage = ({ cart, onClose }) => {
                       </div>
                       <div className="col-md-8 py-4">
                         <div className="card-body">
-                          <div className="d-flex flex-row justify-content-between a;ign-items-center">
-                            <div className="card-title arabic-text"><h5>{item.title}</h5> </div>
-                              <button
-                                className="remove-btn pt-4"
-                                onClick={() => handleRemove(item.id)}
-                                aria-label="Remove"
+                          <div className="d-flex flex-row justify-content-between align-items-center">
+                            <div className="card-title arabic-text">
+                              <h5>{item.title}</h5>
+                            </div>
+                            <button
+                              className="remove-btn pt-4"
+                              onClick={() => handleRemove(item.id)}
+                              aria-label="Remove"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="20px"
+                                viewBox="0 -960 960 960"
+                                width="20px"
+                                fill="#ff4444"
                               >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  height="20px"
-                                  viewBox="0 -960 960 960"
-                                  width="20px"
-                                  fill="#ff4444"
-                                >
-                                  <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
-                                </svg>
-                              </button>
+                                <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+                              </svg>
+                            </button>
                           </div>
                           <div className="d-flex flex-column gap-2">
                             <div className="d-flex justify-content-between">

@@ -40,7 +40,7 @@ const products: Product[] = [
 ];
 
 interface FavoritesPageProps {
-  favorites?: number[]; // Make it optional to handle undefined cases.
+  favorites?: number[]; // Optional to handle undefined cases.
   onClose: () => void;
 }
 
@@ -53,13 +53,10 @@ const FavoritesPage = ({ favorites = [], onClose }: FavoritesPageProps) => {
   return (
     <>
       {/* Overlay */}
-      <div
-        className={`cart-overlay ${favorites.length > 0 ? "open" : ""}`}
-        onClick={onClose}
-      ></div>
+      <div className="cart-overlay open" onClick={onClose}></div>
 
       {/* Popup */}
-      <div className={`cart-popup ${favorites.length > 0 ? "open" : ""}`}>
+      <div className="cart-popup open">
         <div className="container py-5">
           <h2 className="text-center mb-4 section-title-n-m">المفضلة</h2>
           <button className="close-button" onClick={onClose}>
