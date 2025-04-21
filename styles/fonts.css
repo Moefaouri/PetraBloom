@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "IBMPlexSansArabic-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/fonts/IBMPlexSansArabic/IBMPlexSansArabic-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "IBMPlexSansArabic-bold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/fonts/IBMPlexSansArabic/IBMPlexSansArabic-Bold.ttf")
+    format("truetype");
+}

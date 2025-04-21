@@ -3,12 +3,12 @@ import Image from "next/image";
 
 const OurStory = () => {
   return (
-    <div className="container full-width-invert">
-      <div className="row text-center my-5">
+    <div className="container full-width-invert my-6">
+      <div className="row text-center ">
         <h2 className="section-title">قصتنا</h2>
       </div>
-      <div className="row justify-content-center mb-5 responsive-md">
-        <div className="col-12  col-md-6 col-lg-5 mb-5">
+      <div className="row justify-content-center  responsive-md">
+        <div className="col-12  col-md-6 col-lg-5 ">
           <div className="night-container d-flex flex-column gap-4">
             <div className="story-text text-align-right">
               في قلب الطبيعة، حيث الزهور تتفتح والهواء مفعم بالطيبة، بدأت رحلتنا
@@ -32,7 +32,7 @@ const OurStory = () => {
             </div>
           </div>
         </div>
-        <div className="col-12  col-md-6 col-lg-7 mb-5">
+        <div className="col-12  col-md-6 col-lg-7 ">
                 <div className="morning-container d-flex flex-column gap-4">
             <div className="story-img">
               <Image

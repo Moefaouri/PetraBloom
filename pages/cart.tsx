@@ -185,7 +185,7 @@ const CartPage = ({ cart, onClose }) => {
                   <h4 className="mb-0 text-success">{total} د.أ</h4>
                 </div>
                 <hr />
-                <button className="btn btn-primary w-100 py-3 arabic-button">
+                <button className="btn btn-primary w-100 py-2 arabic-button">
                   إتمام الشراء
                 </button>
               </div>

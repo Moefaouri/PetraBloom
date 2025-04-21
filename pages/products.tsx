@@ -69,8 +69,8 @@ const Products = () => {
   };
 
   return (
-    <div className="container my-5 full-width-invert">
-      <div className="row text-center my-5">
+    <div className="container my-6 full-width-invert my-6">
+      <div className="row text-center">
         <h2 className="section-title">منتجاتنا</h2>
       </div>
       <div className="row">

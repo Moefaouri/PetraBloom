@@ -3,12 +3,12 @@ import Image from "next/image";
 
 const ContactUs = () => {
   return (
-    <div className="container my-5">
+    <div className="container my-6">
       <div className="row text-center">
         <h2 className="section-title">التواصل معنا</h2>
       </div>
       <div className="row">
-        <div className="col-12  col-md-6 col-lg-6 my-5">
+        <div className="col-12  col-md-6 col-lg-6 my-6">
           <div className="form-controller">
             <p className="py-4 contact-text">
               للتواصل معنا يرجى تعبئة جميع الحقول وسنقوم بالرد عليك في اسرع وقت
@@ -52,7 +52,7 @@ const ContactUs = () => {
             </form>
           </div>
         </div>
-        <div className="col-12  col-md-6 col-lg-6 my-5 position-relative">
+        <div className="col-12  col-md-6 col-lg-6 my-6 position-relative">
           <div className="contact-honey contact-img ">
             <Image
               src="/images/contact-honey.webp"
@@ -77,6 +77,40 @@ const ContactUs = () => {
               alt="Honey"
             />
           </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <ul className="social_links d-flex flex-row gap-4 justify-content-center align-content-center" id="login">
+            <li>
+              <a
+                id="facebook_dlink"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/images/facebook.png" alt="Facebook" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/images/instagram.png" alt="Instagram" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/images/twitter.png" alt="X (Twitter)" />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

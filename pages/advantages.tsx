@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Advantages = () => {
   return (
-    <div className="container position-relative">
+    <div className="container position-relative my-6">
       {/* Randomly Distributed Leaves */}
       <Image
         src="/images/leaf.png"
@@ -49,7 +49,7 @@ const Advantages = () => {
       />
 
       {/* Main Content */}
-      <div className="row text-center my-5">
+      <div className="row text-center ">
         <h2 className="section-title">الفوائد</h2>
       </div>
       <div className="row">
