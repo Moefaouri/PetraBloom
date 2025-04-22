@@ -39,8 +39,8 @@ body:not(:has(#home)) .full-width-invert.my-6{
   padding-top: 50px;
   padding-bottom: 100px !important;
 }
-.full-width-invert .section-title{
-margin-top: 50px !important;
+.full-width-invert .section-title {
+  margin-top: 50px !important;
 }
 
 .full-width-invert::before,
@@ -48,10 +48,10 @@ margin-top: 50px !important;
   content: "";
   background: url("/images/onedimensionpattern.svg") repeat top center;
   position: absolute;
-  width: 100vmax;
+  width: 100vw; /* Changed from 100vmax to viewport width */
   height: 50px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Centers the element horizontally */
   z-index: 0;
 }
 
@@ -104,6 +104,7 @@ margin-top: 50px !important;
   top: 0;
   left: 0;
   width: 100vw !important;
+  z-index: 10 !important;
 }
 .Social-media-icon {
   border-radius: 50%;
@@ -119,6 +120,12 @@ margin-top: 50px !important;
 .nav-link:focus,
 .nav-link:hover {
   color: var(--white-color);
+}
+.fav svg {
+  fill: transparent;
+  cursor: pointer;
+  stroke: white;
+  stroke-width: 2;
 }
 /* home section */
 #home {

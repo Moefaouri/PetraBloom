@@ -2,10 +2,5 @@
   "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/advantages": "pages/advantages.js",
-  "/ourstory": "pages/ourstory.js",
-  "/products": "pages/products.js",
-  "/contactUs": "pages/contactUs.js",
-  "/main": "pages/main.js"
+  "/": "pages/index.js"
 }

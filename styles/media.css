@@ -72,6 +72,9 @@
   .res-svg {
     fill: #000;
   }
+ .fav svg{
+    stroke: #000 !important;
+  }
   .icon-controller {
     display: flex;
     justify-content: flex-end;
@@ -189,5 +192,25 @@
   }
   .cart-popup {
     width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .responsive-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  /* Reset image positioning */
+  .contact-img img {
+    position: static !important;
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  /* Remove hover effects on mobile if desired */
+  .contact-img img:hover {
+    transform: none !important;
   }
 }

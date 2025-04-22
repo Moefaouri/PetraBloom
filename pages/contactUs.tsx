@@ -52,7 +52,7 @@ const ContactUs = () => {
             </form>
           </div>
         </div>
-        <div className="col-12  col-md-6 col-lg-6 my-6 position-relative">
+        <div className="col-12  col-md-6 col-lg-6 my-6 position-relative responsive-images">
           <div className="contact-honey contact-img ">
             <Image
               src="/images/contact-honey.webp"
