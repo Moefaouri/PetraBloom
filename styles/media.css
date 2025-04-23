@@ -16,6 +16,11 @@
     right: -25px;
   }
 }
+@media (max-width: 1299px) {
+  #home {
+    margin-top: 5rem;
+  }
+}
 @media (max-width: 1199px) {
   .cart-popup {
     width: 100%;
@@ -120,7 +125,7 @@
     height: 50px;
   }
   #home {
-    margin-top: 5rem;
+    margin-top: 20px;
   }
   .home-label {
     font-size: 1.5rem !important;
