@@ -8,7 +8,7 @@ const ContactUs = () => {
         <h2 className="section-title">التواصل معنا</h2>
       </div>
       <div className="row">
-        <div className="col-12  col-md-6 col-lg-6 my-6">
+        <div className="col-12  col-md-6 col-lg-6 ">
           <div className="form-controller">
             <p className="py-4 contact-text">
               للتواصل معنا يرجى تعبئة جميع الحقول وسنقوم بالرد عليك في اسرع وقت

@@ -199,7 +199,8 @@ const Nav = () => {
             <nav className={`nav ${isMenuOpen ? "open text-center" : ""}`}>
               <ul className="d-flex flex-column flex-md-column flex-lg-row justify-content-center gap-1 list-unstyled">
                 <li className="nav-item">
-                  <Link href="/main" className="nav-link text-decoration-none">
+                  <Link href="/main" className="nav-link text-decoration-none"
+                  onClick={toggleMenu}>
                     الصفحة الرئيسية
                   </Link>
                 </li>
@@ -207,7 +208,7 @@ const Nav = () => {
                   <Link
                     href="/products"
                     className="nav-link text-decoration-none"
-                  >
+                    onClick={toggleMenu}>
                     منتجاتنا
                   </Link>
                 </li>
@@ -215,7 +216,7 @@ const Nav = () => {
                   <Link
                     href="/advantages"
                     className="nav-link text-decoration-none"
-                  >
+                    onClick={toggleMenu}>
                     الفوائد
                   </Link>
                 </li>
@@ -223,7 +224,7 @@ const Nav = () => {
                   <Link
                     href="/ourstory"
                     className="nav-link text-decoration-none"
-                  >
+                    onClick={toggleMenu}>
                     قصتنا
                   </Link>
                 </li>
@@ -231,7 +232,7 @@ const Nav = () => {
                   <Link
                     href="/contactUs"
                     className="nav-link text-decoration-none"
-                  >
+                    onClick={toggleMenu}>
                     التواصل معنا
                   </Link>
                 </li>
