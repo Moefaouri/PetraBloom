@@ -8,7 +8,7 @@ const OurStory = () => {
         <h2 className="section-title">قصتنا</h2>
       </div>
       <div className="row justify-content-center  responsive-md">
-        <div className="col-12  col-md-6 col-lg-5 ">
+        <div className="col-12  col-md-6 col-lg-5 mb-xs-5">
           <div className="night-container d-flex flex-column gap-4">
             <div className="story-text text-align-right">
               في قلب الطبيعة، حيث الزهور تتفتح والهواء مفعم بالطيبة، بدأت رحلتنا

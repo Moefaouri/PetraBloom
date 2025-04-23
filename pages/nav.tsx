@@ -27,7 +27,7 @@ const Nav = () => {
   };
 
   return (
-    <div>
+    <div className="nav-container p-lg-3 p-sm-2 p-xs-2">
       {/* Conditional Circle Button */}
       {totalItems > 0 && (
         <button className="circle" onClick={handleCartClick}>
@@ -45,57 +45,53 @@ const Nav = () => {
           )}
         </button>
       )}
-      <div className="container">
+      <div className="container ">
         <header className="">
           <div className="position-absolute honey-controller">
             <img src="/images/honeyWave.svg" alt="Honey Wave" />
           </div>
 
-          <div className="nav-content mt-3 row align-items-center">
+          <div className="nav-content  row align-items-center">
             {/* Logo Section */}
-            <div className="website-logo d-flex flex-row gap-2 align-items-center col-6 col-md-6 col-lg-3 col-xl-3">
-            <Link href="/">
-              <Image
-                src="/images/BeedouinLogo.svg"
-                width={100}
-                height={100}
-                alt="Beedouin Logo"
-                priority
-              />
+            <div className="website-logo d-flex flex-row gap-2 align-items-center col-6 col-md-6 col-lg-3 col-xl-3  ">
+              {/* Mobile Menu Toggle */}
+              <div className="icon-controller justify-content-center">
+                <button
+                  className="navbar-toggler"
+                  type="button"
+                  onClick={toggleMenu}
+                  aria-label="Toggle navigation"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    className="bi bi-list"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <Link href="/">
+                <Image
+                  src="/images/BeedouinLogo.svg"
+                  width={100}
+                  height={100}
+                  alt="Beedouin Logo"
+                  priority
+                />
               </Link>
             </div>
-
-            {/* Mobile Menu Toggle */}
-            <div className="col-2 icon-controller justify-content-center">
-              <button
-                className="navbar-toggler"
-                type="button"
-                onClick={toggleMenu}
-                aria-label="Toggle navigation"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  fill="currentColor"
-                  className="bi bi-list"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                  />
-                </svg>
-              </button>
-            </div>
-
             {/* Navigation Links */}
             <div
-              className={`col-12 col-lg-6 justify-content-center ${
-                isMenuOpen ? "d-block" : "d-none d-lg-flex"
-              }`}
+              className= 'col-12 col-lg-6 justify-content-center d-none d-lg-flex'
             >
-              <nav className={`nav ${isMenuOpen ? "open text-center" : ""}`}>
+              <nav className= 'nav' >
                 <ul className="d-flex flex-column flex-md-column flex-lg-row justify-content-center gap-1 list-unstyled">
                   <li className="nav-item">
                     <Link
@@ -142,7 +138,7 @@ const Nav = () => {
             </div>
             {/* Cart & Favorites Section */}
             <div
-              className="col-3  justify-content-end d-flex gap-3 align-items-center position-relative"
+              className="col-6 col-lg-3  justify-content-end d-flex gap-3 align-items-center position-relative"
               style={{ zIndex: 999 }}
             >
               {/* Cart Icon with Badge */}
@@ -195,6 +191,52 @@ const Nav = () => {
                 />
               )}
             </div>
+          </div>
+          {/* Navigation Links */}
+          <div
+            className= {`nav-wrapper ${isMenuOpen ? "open text-center" : ""}`}
+          >
+            <nav className={`nav ${isMenuOpen ? "open text-center" : ""}`}>
+              <ul className="d-flex flex-column flex-md-column flex-lg-row justify-content-center gap-1 list-unstyled">
+                <li className="nav-item">
+                  <Link href="/main" className="nav-link text-decoration-none">
+                    الصفحة الرئيسية
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    href="/products"
+                    className="nav-link text-decoration-none"
+                  >
+                    منتجاتنا
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    href="/advantages"
+                    className="nav-link text-decoration-none"
+                  >
+                    الفوائد
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    href="/ourstory"
+                    className="nav-link text-decoration-none"
+                  >
+                    قصتنا
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    href="/contactUs"
+                    className="nav-link text-decoration-none"
+                  >
+                    التواصل معنا
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
         </header>
       </div>
