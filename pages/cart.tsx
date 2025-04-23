@@ -251,7 +251,7 @@ const CartPage = ({ cart, onClose }) => {
                     message += `المجموع الكلي: ${total} د.أ\n`;
                     message += `طريقة الدفع: ${paymentMethod}`;
 
-                    const whatsappLink = `https://wa.me/962786067097?text=${encodeURIComponent(
+                    const whatsappLink = `https://wa.me/962779931404?text=${encodeURIComponent(
                       message
                     )}`;
                     window.open(whatsappLink, "_blank");
