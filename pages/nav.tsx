@@ -194,7 +194,7 @@ const Nav = () => {
           </div>
           {/* Navigation Links */}
           <div
-            className= {`nav-wrapper ${isMenuOpen ? "open text-center" : ""}`}
+            className= {`nav-wrapper d-lg-none ${isMenuOpen ? "open text-center" : ""}`}
           >
             <nav className={`nav ${isMenuOpen ? "open text-center" : ""}`}>
               <ul className="d-flex flex-column flex-md-column flex-lg-row justify-content-center gap-1 list-unstyled">
