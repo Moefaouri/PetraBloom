@@ -79,7 +79,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row my-6">
         <div className="col">
           <ul className="social_links d-flex flex-row gap-4 justify-content-center align-content-center" id="login">
             <li>

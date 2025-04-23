@@ -233,6 +233,11 @@
     margin-top: 1rem !important;
   }
 }
+@media (min-width: 767px){
+  .social_links{
+    margin-top: 7rem !important;
+  }
+}
 @media (max-width: 767px) {
   .product-image-container img,
   .product-container .prod-img img {
