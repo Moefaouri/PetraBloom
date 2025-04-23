@@ -8,6 +8,7 @@ import "../styles/reset.css";
 import "../styles/global.css";
 import "../styles/media.css";
 import "../styles/fonts.css";
+import { Analytics } from "@vercel/analytics/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function MyApp({ Component, pageProps }) {
@@ -20,13 +21,18 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/images/favicon-32x32.png" type="image/png"></link>
+        <link
+          rel="icon"
+          href="/images/favicon-32x32.png"
+          type="image/png"
+        ></link>
       </Head>
 
       <CartProvider>
         <FavoriteProvider>
           <Nav />
           <Component {...pageProps} />
+          <Analytics />
         </FavoriteProvider>
       </CartProvider>
 
