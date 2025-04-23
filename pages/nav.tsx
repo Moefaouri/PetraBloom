@@ -91,7 +91,7 @@ const Nav = () => {
 
             {/* Navigation Links */}
             <div
-              className={`col-12 col-lg-7 col-xl-6 justify-content-center ${
+              className={`col-12 col-lg-6 justify-content-center ${
                 isMenuOpen ? "d-block" : "d-none d-lg-flex"
               }`}
             >
