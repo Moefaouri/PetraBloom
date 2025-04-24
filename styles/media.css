@@ -84,6 +84,10 @@
   .cart {
     justify-content: flex-end;
   }
+  .bee-container img {
+    width: 350px;
+    height: auto;
+  }
 }
 @media (width <=991px) {
   .carousel-control-prev,
@@ -237,6 +241,10 @@
   body:not(:has(#home)) .full-width-invert.my-6 ,body:not(:has(#home)) .my-6 {
     margin-top: 1rem !important;
   }
+  .bee-container img {
+    width: 300px;
+    height: auto;
+  }
 }
 @media (min-width: 767px){
   .social_links{
@@ -283,5 +291,9 @@
   }
   .full-width-invert::before, .full-width-invert::after{
     height: 35px !important;
+  }
+  .bee-container img {
+    width: 200px;
+    height: auto;
   }
 }
