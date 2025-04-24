@@ -25,6 +25,9 @@
   .cart-popup {
     width: 100%;
   }
+  .cart-overlay{
+    display: none !important;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1299px) {

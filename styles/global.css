@@ -86,6 +86,9 @@ body:not(:has(#home)) .full-width-invert.my-6{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border: unset;
 }
+.circle .badge-counter {
+  right: 0px;
+}
 .nav-content {
   z-index: 10;
   position: relative;
