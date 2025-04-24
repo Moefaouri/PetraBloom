@@ -116,7 +116,7 @@ const CartPage = ({ cart, onClose }) => {
                     className="card mb-3 shadow-sm arabic-card"
                   >
                     <div className="row g-0 align-items-center">
-                      <div className="col-3 col-md-4 position-relative">
+                      <div className="col-0 col-sm-4 position-relative">
                         <Image
                           src={item.image}
                           alt={item.title}
@@ -125,7 +125,7 @@ const CartPage = ({ cart, onClose }) => {
                           className="img-fluid product-image p-4"
                         />
                       </div>
-                      <div className="col-9 col-md-8 py-4">
+                      <div className="col-12 col-sm-8 py-4">
                         <div className="card-body">
                           <div className="d-flex flex-row justify-content-between align-items-center">
                             <div className="card-title arabic-text">
