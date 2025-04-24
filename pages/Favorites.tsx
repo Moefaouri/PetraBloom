@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useFavorites } from "../src/context/FavoriteContext";
+import { motion } from "framer-motion";
 
 interface Product {
   id: number;
@@ -62,10 +63,25 @@ const FavoritesPage = ({ favorites = [], onClose }: FavoritesPageProps) => {
   return (
     <>
       {/* Overlay */}
-      <div className="cart-overlay open" onClick={onClose}></div>
+      <motion.div
+        key="overlay"
+        className={`cart-overlay ${onClose ? "open" : ""}`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        onClick={onClose}
+      />
 
       {/* Popup */}
-      <div className="cart-popup open">
+      <motion.div
+        key="popup"
+        className={`cart-popup ${onClose ? "open" : ""}`}
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: -100, opacity: 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
         <div className="container py-5">
           <h2 className="text-center mb-4 section-title-n-m">المفضلة</h2>
           <button className="close-button" onClick={onClose}>
@@ -155,7 +171,7 @@ const FavoritesPage = ({ favorites = [], onClose }: FavoritesPageProps) => {
               </div>
             ))}
         </div>
-      </div>
+      </motion.div>
 
       <style jsx>{`
         .loader-container {

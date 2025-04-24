@@ -6,6 +6,7 @@ import Link from "next/link";
 import CartPage from "./cart";
 import { useFavorites } from "../src/context/FavoriteContext";
 import FavoritesPage from "./Favorites";
+import { AnimatePresence } from "framer-motion";
 
 const Nav = () => {
   const router = useRouter();
@@ -159,12 +160,14 @@ const Nav = () => {
                 </div>
               </div>
               {/* Cart Popup */}
+              <AnimatePresence>
               {isCartOpen && (
                 <CartPage
                   cart={encodeURIComponent(JSON.stringify(cart))}
                   onClose={() => setIsCartOpen(false)}
                 />
               )}
+              </AnimatePresence>
               <div className="position-relative fav ">
                 <span className="badge-counter">{favorites.size}</span>
                 <svg
@@ -179,12 +182,14 @@ const Nav = () => {
               </div>
 
               {/* Favorites Popup */}
+              <AnimatePresence>
               {isFavoritesOpen && (
                 <FavoritesPage
                   favorites={Array.from(favorites)}
                   onClose={() => setIsFavoritesOpen(false)}
                 />
               )}
+              </AnimatePresence>
             </div>
           </div>
           {/* Navigation Links */}

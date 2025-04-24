@@ -383,7 +383,7 @@ span.quantity {
   height: 100vh;
   background-color: var(--body-background-color);
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: left 0.3s ease-in-out;
+  /* transition: left 0.3s ease-in-out; */
   z-index: 1000;
   overflow-y: auto;
 }
