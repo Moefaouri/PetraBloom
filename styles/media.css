@@ -281,4 +281,7 @@
   .remove-btn{
     padding: 0 !important;
   }
+  .full-width-invert::before, .full-width-invert::after{
+    height: 35px !important;
+  }
 }
