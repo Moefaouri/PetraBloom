@@ -72,32 +72,9 @@ const Advantages = () => {
         <div className="col-12  col-md-4 col-lg-4 dashed-line-container ">
           <div className="bee-container d-flex justify-content-center">
             <Image
-              src="/images/bee.webp"
-              width={165}
-              height={165}
-              alt="dashed line"
-            />
-          </div>
-          <div className="road-container position-relative">
-            <Image
-              src="/images/dashed-line.svg"
-              width={330}
-              height={330}
-              alt="dashed line"
-            />
-            <Image
-              src="/images/sunflower.webp"
-              width={165}
-              height={165}
-              alt="flowers"
-              className="flowers-img"
-            />
-          </div>
-          <div className="destination-container d-flex justify-content-center">
-            <Image
-              src="/images/honey-jar.webp"
-              width={165}
-              height={165}
+              src="/images/Layer2.png"
+              width={450}
+              height={660}
               alt="dashed line"
             />
           </div>

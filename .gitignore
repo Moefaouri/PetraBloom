@@ -13,6 +13,7 @@ coverage/
 .next/
 out/
 build-manifest.json
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
@@ -20,3 +21,6 @@ yarn-error.log*
 
 # Temporary and system files
 Thumbs.db
+
+# Trace files
+trace
