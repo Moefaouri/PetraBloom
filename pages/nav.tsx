@@ -64,16 +64,13 @@ const Nav = () => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    className="bi bi-list"
-                    viewBox="0 0 16 16"
+                    height="34px"
+                    viewBox="0 -960 960 960"
+                    width="34px"
+                    fill="#164c29"
+                    style={{ transform: "scaleX(-1)" }}
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                    />
+                    <path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z" />
                   </svg>
                 </button>
               </div>
@@ -88,10 +85,8 @@ const Nav = () => {
               </Link>
             </div>
             {/* Navigation Links */}
-            <div
-              className= 'col-12 col-lg-6 justify-content-center d-none d-lg-flex'
-            >
-              <nav className= 'nav' >
+            <div className="col-12 col-lg-6 justify-content-center d-none d-lg-flex">
+              <nav className="nav">
                 <ul className="d-flex flex-column flex-md-column flex-lg-row justify-content-center gap-1 list-unstyled">
                   <li className="nav-item">
                     <Link
@@ -194,13 +189,18 @@ const Nav = () => {
           </div>
           {/* Navigation Links */}
           <div
-            className= {`nav-wrapper d-lg-none ${isMenuOpen ? "open text-center" : ""}`}
+            className={`nav-wrapper d-lg-none ${
+              isMenuOpen ? "open text-center" : ""
+            }`}
           >
             <nav className={`nav ${isMenuOpen ? "open text-center" : ""}`}>
               <ul className="d-flex flex-column flex-md-column flex-lg-row justify-content-center gap-1 list-unstyled">
                 <li className="nav-item">
-                  <Link href="/main" className="nav-link text-decoration-none"
-                  onClick={toggleMenu}>
+                  <Link
+                    href="/main"
+                    className="nav-link text-decoration-none"
+                    onClick={toggleMenu}
+                  >
                     الصفحة الرئيسية
                   </Link>
                 </li>
@@ -208,7 +208,8 @@ const Nav = () => {
                   <Link
                     href="/products"
                     className="nav-link text-decoration-none"
-                    onClick={toggleMenu}>
+                    onClick={toggleMenu}
+                  >
                     منتجاتنا
                   </Link>
                 </li>
@@ -216,7 +217,8 @@ const Nav = () => {
                   <Link
                     href="/advantages"
                     className="nav-link text-decoration-none"
-                    onClick={toggleMenu}>
+                    onClick={toggleMenu}
+                  >
                     الفوائد
                   </Link>
                 </li>
@@ -224,7 +226,8 @@ const Nav = () => {
                   <Link
                     href="/ourstory"
                     className="nav-link text-decoration-none"
-                    onClick={toggleMenu}>
+                    onClick={toggleMenu}
+                  >
                     قصتنا
                   </Link>
                 </li>
@@ -232,7 +235,8 @@ const Nav = () => {
                   <Link
                     href="/contactUs"
                     className="nav-link text-decoration-none"
-                    onClick={toggleMenu}>
+                    onClick={toggleMenu}
+                  >
                     التواصل معنا
                   </Link>
                 </li>
