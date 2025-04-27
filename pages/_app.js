@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { CartProvider, useCart } from "../src/context/CartContext"; // Adjusted to match your context file
+import { CartProvider, useCart } from "../src/context/CartContext";
 import { FavoriteProvider } from "../src/context/FavoriteContext";
 import Nav from "./nav";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,6 +17,15 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="بيودوين هو وجهتك الأولى لشراء العسل المحلي الفاخر. اكتشف أفضل أنواع العسل الأردني، ومنتجات النحل، والنكهات الفريدة، وكل ذلك يتم توصيله إليك مباشرة."
+        />
+        <meta
+          name="keywords"
+          content="honey,organic honey,jordanian honey,gifts, متجر عسل أونلاين, عسل أردني, عسل بلدي, منتجات النحل, عسل طبيعي, عسل عضوي, عسل خام, هدايا عسل, عسل بالجملة, عسل للبيع, عسل للطبخ, عسل للشفاء, عسل نباتي, عسل طبيعي "
+        />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap"
           rel="stylesheet"
@@ -26,6 +35,7 @@ function MyApp({ Component, pageProps }) {
           href="/images/favicon-32x32.png"
           type="image/png"
         ></link>
+        <title>Beedouin</title>
       </Head>
 
       <CartProvider>
