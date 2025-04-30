@@ -15,7 +15,7 @@ const ContactUs = () => {
               ممكن
             </p>
             <form
-              action="mailto:mnsour17@gmail.com" // The recipient's email address
+              action="https://formspree.io/f/xkgropwg" // The recipient's email address
               method="POST" // POST method to send the form data
               className="d-flex flex-column gap-4 mb-3"
             >
@@ -23,12 +23,14 @@ const ContactUs = () => {
                 placeholder="ايميلك الشخصي"
                 type="email"
                 name="email"
+                autoComplete="email"
                 className="form-control"
                 required
               />
               <input
                 type="tel"
                 name="phone"
+                autoComplete="tel"
                 className="form-control"
                 placeholder="رقم الهاتف"
                 style={{ direction: "rtl" }}
