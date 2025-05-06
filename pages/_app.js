@@ -32,8 +32,8 @@ function MyApp({ Component, pageProps }) {
         />
         <link
           rel="icon"
-          href="/images/favicon-32x32.png"
-          type="image/png"
+          href="/favicon.ico"
+          type="image/x-icon"
         ></link>
         <title>Beedouin</title>
       </Head>
