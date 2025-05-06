@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
           name="keywords"
           content="honey,organic honey,jordanian honey,gifts, متجر عسل أونلاين, عسل أردني, عسل بلدي, منتجات النحل, عسل طبيعي, عسل عضوي, عسل خام, هدايا عسل, عسل بالجملة, عسل للبيع, عسل للطبخ, عسل للشفاء, عسل نباتي, عسل طبيعي "
         />
-
+        <meta name="google-site-verification" content="sufZkCMsEi99KK1hbpwzlN500G2nRDIs9YhcKivdcUw" />
         <link
           href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap"
           rel="stylesheet"
@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }) {
           href="/favicon.ico"
           type="image/x-icon"
         ></link>
+
         <title>Beedouin</title>
       </Head>
 
