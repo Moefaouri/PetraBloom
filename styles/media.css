@@ -310,6 +310,9 @@
     display: flex;
     justify-content: center;
   }
+  .bee-container {
+    margin-left: unset !important;
+}
 }
 @media (max-width: 576px) {
   .product-image {
