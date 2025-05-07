@@ -17,16 +17,16 @@ body {
   direction: rtl;
   text-align: right;
 }
-.my-6{
+.my-6 {
   margin-top: 4.5rem !important;
   margin-bottom: 4.5rem !important;
 }
 
-body:not(:has(#home)) .my-6{
+body:not(:has(#home)) .my-6 {
   margin-top: 6rem !important;
   margin-bottom: 2rem !important;
 }
-body:not(:has(#home)) .full-width-invert.my-6{
+body:not(:has(#home)) .full-width-invert.my-6 {
   margin-top: 7.5rem !important;
   margin-bottom: 0rem !important;
 }
@@ -64,7 +64,7 @@ body:not(:has(#home)) .full-width-invert.my-6{
 
 .section-title {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: var(--Secondary-color);
   margin-bottom: 2.5rem;
 }
 .section-title-n-m {
@@ -144,6 +144,8 @@ body:not(:has(#home)) .full-width-invert.my-6{
 }
 .product-image-container img {
   width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 .product-description {
   font-size: 20px;
@@ -182,7 +184,7 @@ body:not(:has(#home)) .full-width-invert.my-6{
 .product-price-responsive {
   display: none;
 }
-.product-container{
+.product-container {
   background-color: var(--white-color);
   border-radius: 16px;
 }
@@ -193,21 +195,23 @@ body:not(:has(#home)) .full-width-invert.my-6{
 .prod {
   background-color: white;
   padding: 20px;
+  border-radius: 16px;
 }
 .product-title {
   color: var(--primary-color);
   font-size: 34px;
 }
-.prod-img{
+.prod-img {
   padding-top: 20px;
 }
 .prod-img img {
   border-radius: 8px;
-    width: 100%;
+  width: 100%;
 }
 .prod-desc {
   color: var(--Secondary-color);
   font-size: 18px;
+  min-height: 130px !important;
 }
 .primary-btns {
   background-color: var(--primary-color);
@@ -218,12 +222,12 @@ body:not(:has(#home)) .full-width-invert.my-6{
   color: var(--white-color);
 }
 
-.product-container .prod-img img,
-.prod {
-  max-width: 90%;
-  height: auto;
+.product-container .prod-img img {
   margin: 0 auto;
-  display: block;
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  height: 90%;
 }
 .fav-icon {
   right: 30px;
@@ -315,7 +319,14 @@ span.quantity {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   min-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
+img[alt="Honey"] {
+  aspect-ratio: 1 / 0.8 !important;
+  object-fit: fill !important;
+}
+
 /* contact us */
 .form-controller {
   background-color: var(--white-color);
@@ -325,8 +336,8 @@ span.quantity {
   border-radius: 10px;
 }
 .form-control:focus {
-  border-color: var(--Secondary-color); 
-  box-shadow: 0 0 0 .25rem rgba(22, 76, 41, 0.25); 
+  border-color: var(--Secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(22, 76, 41, 0.25);
 }
 
 .contact-text {
@@ -459,7 +470,7 @@ span.quantity {
   border: 3px solid var(--Secondary-color);
   color: var(--Secondary-color);
 }
-.pay-btn:hover svg{
+.pay-btn:hover svg {
   fill: var(--Secondary-color) !important ;
 }
 .badge-counter {
@@ -524,4 +535,8 @@ span.quantity {
 .form-check .form-check-input {
   float: right;
   margin-left: 0.7rem;
+}
+.footer-text{
+  color: var(--Secondary-color);
+  font-weight: 700;
 }

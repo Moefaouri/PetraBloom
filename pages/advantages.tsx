@@ -55,8 +55,8 @@ const Advantages = () => {
       <div className="row">
         <div className="col-12  col-md-4 col-lg-4 right-content  d-flex flex-column justify-content-around">
           <div className="row">
-            منتجاتنا الأفضل في السوق لأنها طبيعية من مزارعنا المنتشرة في أرجاء
-            المملكة ولا تحتوي على مواد حافظة.
+            العسل الجبلي وحبوب اللقاح غنية بالفيتامينات والمضادات الطبيعية اللي
+            بتساعد على تقوية جهاز المناعة وتحمي الجسم من الأمراض.
           </div>
           <div className="row">
             <div className="bee-mover d-flex flex-row justify-content-center">
@@ -64,26 +64,26 @@ const Advantages = () => {
             </div>
           </div>
           <div className="row">
-            يوفر العسل طاقة سريعة للجسم بسبب احتوائه على السكريات الطبيعية مثل
-            الجلوكوز والفركتوز.
+            منتجاتنا بتعطيك طاقة مستدامة طول اليوم بفضل السكريات الطبيعية
+            والبروتينات اللي فيها، وبتخليك دايمًا في نشاط وحيوية!
           </div>
           <div className="row">&nbsp;</div>
         </div>
         <div className="col-12  col-md-4 col-lg-4 dashed-line-container ">
           <div className="bee-container d-flex justify-content-center">
             <Image
-              src="/images/Layer2.png"
+              src="/images/honey-jar.webp"
               width={450}
               height={660}
-              alt="dashed line"
+              alt="honeyJar"
             />
           </div>
         </div>
         <div className="col-12  col-md-4 col-lg-4 left-content  d-flex justify-content-around flex-column">
           <div className="row">&nbsp;</div>
           <div className="row">
-            منتجاتنا الأفضل في السوق لأنها طبيعية من مزارعنا المنتشرة في أرجاء
-            المملكة ولا تحتوي على مواد حافظة.
+            بتحتوي على إنزيمات طبيعية بتساهم في تحسين عملية الهضم، بتساعد على
+            تعزيز صحة الجهاز الهضمي بشكل عام.
           </div>
           <div className="row">
             <div className="bee-mover d-flex flex-row justify-content-center">
@@ -91,8 +91,8 @@ const Advantages = () => {
             </div>
           </div>
           <div className="row">
-            يوفر العسل طاقة سريعة للجسم بسبب احتوائه على السكريات الطبيعية مثل
-            الجلوكوز والفركتوز.
+            العسل وحبوب اللقاح مفيدة للبشرة، بتجدد خلايا الجلد وبتقلل
+            الالتهابات، مما يساهم في تحسين الصحة العامة للبشرة والشعر.
           </div>
         </div>
       </div>

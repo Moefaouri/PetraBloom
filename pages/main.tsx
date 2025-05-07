@@ -39,18 +39,18 @@ const Main = () => {
           <div className="carousel-item active">
             <div className="row align-items-center">
               <div className="col-12  col-md-6 col-lg-6-md-6">
-                <h1 className="home-label text-center">عسل بلدي اصلي</h1>
+                <h1 className="home-label text-center">عسل بلدي</h1>
                 <p className="product-description text-center">
-                  يتوفر لدينا عسل طبيعي خالي من الشوائب من جبال السلط
+                  أصلي، عضوي، حُر، وغير معالج بالحرارة
                 </p>
               </div>
               <div className="col-12  col-md-6 col-lg-6-md-6">
                 <div className="product-image-container text-center">
                   <Image
-                    src="/images/honey.webp"
+                    src="/images/items.webp"
                     width={500}
                     height={500}
-                    alt="Honey"
+                    alt="items"
                   />
                 </div>
               </div>
@@ -61,15 +61,15 @@ const Main = () => {
           <div className="carousel-item">
             <div className="row align-items-center">
               <div className="col-12  col-md-6 col-lg-6-md-6">
-                <h1 className="home-label text-center">اعشاب علاجية</h1>
+                <h1 className="home-label text-center">حبوب لقاح</h1>
                 <p className="product-description text-center">
-                  يتوفر لدينا العديد من الوصفات العلاجية من خلال استخدام اعشاب وطننا العزيز
+                  غنية بالفيتامينات والبروتين، لتعزيز المناعة وتغذية الجسم
                 </p>
               </div>
               <div className="col-12  col-md-6 col-lg-6-md-6">
                 <div className="product-image-container text-center">
                   <Image
-                    src="/images/herbs.webp"
+                    src="/images/bees.webp"
                     width={500}
                     height={500}
                     alt="Herbs"
@@ -83,15 +83,18 @@ const Main = () => {
           <div className="carousel-item">
             <div className="row align-items-center">
               <div className="col-12  col-md-6 col-lg-6-md-6">
-                <h1 className="home-label text-center text-center">منتجات بقرية</h1>
+                <h1 className="home-label text-center text-center">
+                  توصيل مجاني
+                </h1>
                 <p className="product-description text-center">
-                  يتوفر لدينا لمنتجات البقرية من حليب اجبان البان 
+                  توصيل مجاني وسريع لكل أنحاء المملكة
+                   للطلبات فوق 15 دينار
                 </p>
               </div>
               <div className="col-12  col-md-6 col-lg-6-md-6">
                 <div className="product-image-container text-center">
                   <Image
-                    src="/images/milk.webp"
+                    src="/images/Amman.webp"
                     width={500}
                     height={500}
                     alt="Dairy Products"
@@ -109,7 +112,10 @@ const Main = () => {
           data-bs-target="#productCarousel"
           data-bs-slide="prev"
         >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
           <span className="visually-hidden">Previous</span>
         </button>
         <button
@@ -118,7 +124,10 @@ const Main = () => {
           data-bs-target="#productCarousel"
           data-bs-slide="next"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
           <span className="visually-hidden">Next</span>
         </button>
       </div>
