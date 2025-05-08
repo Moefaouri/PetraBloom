@@ -256,20 +256,21 @@ const CartPage = ({ cart, onClose }) => {
                           ) as HTMLInputElement
                         )?.value || "غير محدد";
 
-                      let message = "مرحبًا، أود إتمام الطلب التالي:\n";
-                      selectedItems.forEach((item) => {
-                        message += `${item.quantity} \u00D7 ${item.title} = ${
-                          item.price * item.quantity
-                        } ${item.currency}\n`;
-                      });
-                      message += `المجموع الكلي: ${total} د.أ\n`;
-                      message += `طريقة الدفع: ${paymentMethod}`;
-
-                      const whatsappLink = `https://wa.me/962790137445?text=${encodeURIComponent(
-                        message
-                      )}`;
-                      window.open(whatsappLink, "_blank");
-                    }}
+                        let message = "مرحبًا، أود إتمام الطلب التالي:\n";
+                        selectedItems.forEach(item => {
+                          message += `${item.quantity} × ${item.title} = ${item.price * item.quantity} ${item.currency}\n`;
+                        });
+                        message += `المجموع الكلي: ${total} د.أ\n`;
+                        message += `طريقة الدفع: ${paymentMethod}`;
+                        
+                        const base = "https://web.whatsapp.com/send";
+                        const params = new URLSearchParams({
+                          phone: "962790137445",
+                          text: message
+                        });
+                        
+                        window.open(`${base}?${params.toString()}`, "_blank");
+                      }}
                     className="btn btn-success w-100 py-2 arabic-button d-flex justify-content-center align-items-center gap-2 pay-btn"
                   >
                     <span>إتمام الشراء عبر واتساب</span>
