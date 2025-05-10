@@ -175,7 +175,7 @@ const CartPage = ({ cart, onClose }) => {
                             <div className="d-flex justify-content-between fw-bold">
                               <span>المجموع:</span>
                               <span>
-                                {item.price * item.quantity} {item.currency}
+                              {(item.price * item.quantity).toFixed(2)} {item.currency}
                               </span>
                             </div>
                           </div>
