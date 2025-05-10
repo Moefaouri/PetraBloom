@@ -85,8 +85,8 @@ const CartPage = ({ cart, onClose }) => {
   // Calculate total
   const total = selectedItems.reduce((sum, item) => {
     return sum + (item?.price || 0) * (item?.quantity || 0);
-  }, 0).toFixed(2);
-  
+  }, 0);
+  const formattedTotal = total.toFixed(2);
 
   return (
     <>
@@ -252,10 +252,8 @@ const CartPage = ({ cart, onClose }) => {
                     <p className="mb-0">🎉 لقد حصلت على توصيل مجاني</p>
                   ) : (
                     <p className="mb-0">
-                     
-                        اطلب بـ <strong>15 دينار</strong> أو أكثر لتحصل على
-                        توصيل مجاني!
-                      
+                      اطلب بـ <strong>15 دينار</strong> أو أكثر لتحصل على توصيل
+                      مجاني!
                     </p>
                   )}
                 </div>
