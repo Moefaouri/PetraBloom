@@ -86,7 +86,7 @@ const CartPage = ({ cart, onClose }) => {
   const total = selectedItems.reduce((sum, item) => {
     return sum + (item?.price || 0) * (item?.quantity || 0);
   }, 0);
-  const formattedTotal = total.toFixed(2); 
+  const formattedTotal = total.toFixed(2);
 
   return (
     <>
@@ -175,7 +175,8 @@ const CartPage = ({ cart, onClose }) => {
                             <div className="d-flex justify-content-between fw-bold">
                               <span>المجموع:</span>
                               <span>
-                              {(item.price * item.quantity).toFixed(2)} {item.currency}
+                                {(item.price * item.quantity).toFixed(2)}{" "}
+                                {item.currency}
                               </span>
                             </div>
                           </div>
@@ -272,11 +273,11 @@ const CartPage = ({ cart, onClose }) => {
 
                     let message = "مرحبًا، أود إتمام الطلب التالي:\n";
                     selectedItems.forEach((item) => {
-                      message += `${item.quantity} \u00D7 ${item.title} = ${
+                      message += `${item.quantity} \u00D7 ${item.title} = ${(
                         item.price * item.quantity
-                      } ${item.currency}\n`;
+                      ).toFixed(2)} ${item.currency}\n`;
                     });
-                    message += `المجموع الكلي: ${total} د.أ\n`;
+                    message += `المجموع الكلي: ${formattedTotal} د.أ\n`;
                     message += `طريقة الدفع: ${paymentMethod}`;
 
                     const whatsappLink = `https://wa.me/962790137445?text=${encodeURIComponent(
