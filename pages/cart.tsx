@@ -86,7 +86,7 @@ const CartPage = ({ cart, onClose }) => {
   const total = selectedItems.reduce((sum, item) => {
     return sum + (item?.price || 0) * (item?.quantity || 0);
   }, 0);
-  const formattedTotal = total.toFixed(2);
+  const formattedTotal = total.toFixed(2); 
 
   return (
     <>
@@ -241,7 +241,7 @@ const CartPage = ({ cart, onClose }) => {
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
                   <h4 className="mb-0 arabic-text">المجموع الكلي:</h4>
-                  <h4 className="mb-0 text-success">{total} د.أ</h4>
+                  <h4 className="mb-0 text-success">{formattedTotal} د.أ</h4>
                 </div>
                 <div
                   className={`mt-3 text-center ${
