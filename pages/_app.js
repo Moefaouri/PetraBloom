@@ -25,16 +25,96 @@ function MyApp({ Component, pageProps }) {
           name="keywords"
           content="honey,organic honey,jordanian honey,gifts, متجر عسل أونلاين, عسل أردني, عسل بلدي, منتجات النحل, عسل طبيعي, عسل عضوي, عسل خام, هدايا عسل, عسل بالجملة, عسل للبيع, عسل للطبخ, عسل للشفاء, عسل نباتي, عسل طبيعي "
         />
-        <meta name="google-site-verification" content="sufZkCMsEi99KK1hbpwzlN500G2nRDIs9YhcKivdcUw" />
+        <meta
+          name="google-site-verification"
+          content="sufZkCMsEi99KK1hbpwzlN500G2nRDIs9YhcKivdcUw"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Store",
+                  "@id": "https://www.beedouin.com/#organization",
+                  name: "Beedouin | بيدوين",
+                  url: "https://www.beedouin.com",
+                  sameAs: [
+                    "https://www.facebook.com/beedouin",
+                    "https://www.instagram.com/beedouin.jo",
+                  ],
+                  email: "support@beedouin.com",
+                  telephone: "+962790137445",
+                  priceRange: "$",
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "عمان",
+                    addressRegion: "عمان",
+                    addressCountry: "الأردن",
+                  },
+                  openingHours: [
+                    "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday 00:00-24:00",
+                  ],
+                  paymentAccepted: "Cash, Cliq",
+                  currenciesAccepted: "JOD",
+                },
+                {
+                  "@type": "Place",
+                  "@id": "https://www.beedouin.com/#place",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "عمان",
+                    "addressRegion": "عمان",
+                    "addressCountry": "الأردن"
+                  }
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.beedouin.com/",
+                  url: "https://www.beedouin.com",
+                  name: "Beedouin",
+                  alternateName: "بيدوين",
+                  publisher: {
+                    "@id": "https://www.beedouin.com/",
+                  },
+                  inLanguage: "ar",
+                },
+                {
+                  "@type": "ImageObject",
+                  "@id": "https://www.beedouin.com/images/BeedouinLogo.svg",
+                  "url": "https://www.beedouin.com/images/BeedouinLogo.svg",
+                  "contentUrl": "	https://www.beedouin.com/images/BeedouinLogo.svg",
+                  "caption": "Beedouin",
+                  "inLanguage": "ar",
+                  "width": "300",
+                  "height": "300"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": "2",
+                  "item": {
+                    "@id": "https://www.beedouin.com/products/",
+                    "name": "المتجر"
+                  }
+                },
+                {
+                  "@type": "CollectionPage",
+                  "@id": "https://www.beedouin.com/products/",
+                  "url": "https://www.beedouin.com/products/",
+                  "name": "المتجر - Beedouin | بيدوين",
+                  "isPartOf": {
+                    "@id": "https://www.beedouin.com/"
+                  }},
+              ],
+            }),
+          }}
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         />
-        <link
-          rel="icon"
-          href="/favicon.ico"
-          type="image/x-icon"
-        ></link>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon"></link>
 
         <title>Beedouin</title>
       </Head>
