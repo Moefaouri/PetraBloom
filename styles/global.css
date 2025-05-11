@@ -322,7 +322,7 @@ span.quantity {
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
-img[alt="Honey"] {
+.aspect-ratio {
   aspect-ratio: 1 / 0.8 !important;
   object-fit: fill !important;
 }

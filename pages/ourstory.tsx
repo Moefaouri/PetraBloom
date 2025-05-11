@@ -31,6 +31,7 @@ const OurStory = () => {
                 width={700}
                 height={700}
                 alt="bees cells"
+                className="aspect-ratio"
               />
             </div>
           </div>
@@ -43,6 +44,7 @@ const OurStory = () => {
                 width={700}
                 height={700}
                 alt="musab"
+                className="aspect-ratio"
               />
             </div>
             <div className="story-text">

@@ -126,6 +126,7 @@ const ContactUs = () => {
               width={200}
               height={200}
               alt="Honey cells"
+              className="aspect-ratio"
             />
           </div>
           <div className="contact-herbs contact-img">
@@ -134,6 +135,7 @@ const ContactUs = () => {
               width={200}
               height={200}
               alt="bees"
+              className="aspect-ratio"
             />
           </div>
           <div className="contact-milk contact-img">
@@ -142,6 +144,7 @@ const ContactUs = () => {
               width={200}
               height={200}
               alt="honey"
+              className="aspect-ratio"
             />
           </div>
         </div>
