@@ -540,3 +540,16 @@ img[alt="Honey"] {
   color: var(--Secondary-color);
   font-weight: 700;
 }
+/* error page  */
+.error-container{
+  height:calc(100vh - 100px) !important ;
+}
+.display-1{
+  color: var(--Secondary-color);
+}
+.h2{
+  color: var(--primary-color);
+}
+.error-image {
+  transform: scaleX(-1);
+}

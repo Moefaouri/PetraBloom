@@ -157,7 +157,7 @@
   .contact-text {
     font-size: 15px;
   }
-  .primary-btns {
+  .primary-btns:not(.error-btn) {
     width: 100%;
     justify-content: center;
   }
