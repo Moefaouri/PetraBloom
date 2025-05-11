@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name="keywords"
-          content="honey,organic honey,jordanian honey,gifts, متجر عسل أونلاين, عسل أردني, عسل بلدي, منتجات النحل, عسل طبيعي, عسل عضوي, عسل خام, هدايا عسل, عسل بالجملة, عسل للبيع, عسل للطبخ, عسل للشفاء, عسل نباتي, عسل طبيعي "
+          content="عسل أردني, عسل بلدي, عسل طبيعي, متجر عسل, عسل عضوي, عسل خام, منتجات النحل, هدايا عسل, عسل أونلاين الأردن, jordanian honey, natural honey, raw honey, organic honey, bee products, honey gifts, online honey store"
         />
         <meta
           name="google-site-verification"
@@ -39,6 +39,22 @@ function MyApp({ Component, pageProps }) {
                   "@type": "Store",
                   "@id": "https://www.beedouin.com/#organization",
                   name: "Beedouin | بيدوين",
+                  description:
+                    "متجر بيودوين يقدم عسل بلدي طبيعي 100% من مناحل السلط، مع توصيل سريع داخل الأردن.",
+                  founder: {
+                    "@type": "Person",
+                    name: "Mansour Nsour",
+                    image: "https://www.beedouin.com/images/BeedouinLogo.svg",
+                    jobTitle: "Founder",
+                    sameAs: "https://www.facebook.com/beedouin",
+                  },
+                  by: "Mohammad Elfauri",
+                  logo: {
+                    "@type": "ImageObject",
+                    "@id": "https://www.beedouin.com/images/BeedouinLogo.svg",
+                    url: "https://www.beedouin.com/images/BeedouinLogo.svg",
+                    caption: "Beedouin",
+                  },
                   url: "https://www.beedouin.com",
                   sameAs: [
                     "https://www.facebook.com/beedouin",
@@ -62,12 +78,12 @@ function MyApp({ Component, pageProps }) {
                 {
                   "@type": "Place",
                   "@id": "https://www.beedouin.com/#place",
-                  "address": {
+                  address: {
                     "@type": "PostalAddress",
-                    "addressLocality": "عمان",
-                    "addressRegion": "عمان",
-                    "addressCountry": "الأردن"
-                  }
+                    addressLocality: "عمان",
+                    addressRegion: "عمان",
+                    addressCountry: "الأردن",
+                  },
                 },
                 {
                   "@type": "WebSite",
@@ -81,31 +97,22 @@ function MyApp({ Component, pageProps }) {
                   inLanguage: "ar",
                 },
                 {
-                  "@type": "ImageObject",
-                  "@id": "https://www.beedouin.com/images/BeedouinLogo.svg",
-                  "url": "https://www.beedouin.com/images/BeedouinLogo.svg",
-                  "contentUrl": "	https://www.beedouin.com/images/BeedouinLogo.svg",
-                  "caption": "Beedouin",
-                  "inLanguage": "ar",
-                  "width": "300",
-                  "height": "300"
-                },
-                {
                   "@type": "ListItem",
-                  "position": "2",
-                  "item": {
+                  position: "2",
+                  item: {
                     "@id": "https://www.beedouin.com/products/",
-                    "name": "المتجر"
-                  }
+                    name: "المتجر",
+                  },
                 },
                 {
                   "@type": "CollectionPage",
                   "@id": "https://www.beedouin.com/products/",
-                  "url": "https://www.beedouin.com/products/",
-                  "name": "المتجر - Beedouin | بيدوين",
-                  "isPartOf": {
-                    "@id": "https://www.beedouin.com/"
-                  }},
+                  url: "https://www.beedouin.com/products/",
+                  name: "المتجر - Beedouin | بيدوين",
+                  isPartOf: {
+                    "@id": "https://www.beedouin.com/",
+                  },
+                },
               ],
             }),
           }}
