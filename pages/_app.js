@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
                     "https://www.facebook.com/beedouin",
                     "https://www.instagram.com/beedouin.jo",
                   ],
-                  email: "support@beedouin.com",
+                  email: "mnsour17@gmail.com",
                   telephone: "+962790137445",
                   priceRange: "$",
                   address: {
