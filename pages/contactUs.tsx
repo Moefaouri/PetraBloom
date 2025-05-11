@@ -125,7 +125,7 @@ const ContactUs = () => {
               src="/images/cells.webp"
               width={200}
               height={200}
-              alt="Honey"
+              alt="Honey cells"
             />
           </div>
           <div className="contact-herbs contact-img">
@@ -133,7 +133,7 @@ const ContactUs = () => {
               src="/images/contact-bees.webp"
               width={200}
               height={200}
-              alt="Herbs"
+              alt="bees"
             />
           </div>
           <div className="contact-milk contact-img">
@@ -141,7 +141,7 @@ const ContactUs = () => {
               src="/images/contact-honey.webp"
               width={200}
               height={200}
-              alt="Milk"
+              alt="honey"
             />
           </div>
         </div>

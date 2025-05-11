@@ -72,7 +72,7 @@ const Main = () => {
                     src="/images/bees.webp"
                     width={500}
                     height={500}
-                    alt="Herbs"
+                    alt="bees"
                   />
                 </div>
               </div>
@@ -97,7 +97,7 @@ const Main = () => {
                     src="/images/Amman.webp"
                     width={500}
                     height={500}
-                    alt="Dairy Products"
+                    alt="Amman"
                   />
                 </div>
               </div>

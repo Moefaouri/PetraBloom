@@ -30,7 +30,7 @@ const OurStory = () => {
                 src="/images/bees.webp"
                 width={700}
                 height={700}
-                alt="Honey"
+                alt="bees cells"
               />
             </div>
           </div>
@@ -42,7 +42,7 @@ const OurStory = () => {
                 src="/images/musab.webp"
                 width={700}
                 height={700}
-                alt="Honey"
+                alt="musab"
               />
             </div>
             <div className="story-text">
