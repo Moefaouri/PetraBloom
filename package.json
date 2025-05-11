@@ -1,6 +1,6 @@
 {
-  "name": "PetraBloom",
-  "version": "0.1.0",
+  "name": "Beedouin",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.2",

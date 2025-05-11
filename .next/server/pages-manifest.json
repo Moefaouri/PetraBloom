@@ -1,7 +1,1 @@
-{
-  "/_document": "pages/_document.js",
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/": "pages/index.js",
-  "/404": "pages/404.js"
-}
+{"/_error":"pages/_error.js","/Favorites":"pages/Favorites.html","/404":"pages/404.html","/cart":"pages/cart.html","/advantages":"pages/advantages.html","/":"pages/index.html","/contactUs":"pages/contactUs.html","/main":"pages/main.html","/nav":"pages/nav.html","/products":"pages/products.html","/ourstory":"pages/ourstory.html","/_app":"pages/_app.js","/_document":"pages/_document.js"}
